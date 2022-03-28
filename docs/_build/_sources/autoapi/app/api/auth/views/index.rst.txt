@@ -1,0 +1,199 @@
+:py:mod:`app.api.auth.views`
+============================
+
+.. py:module:: app.api.auth.views
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   app.api.auth.views.create_user
+   app.api.auth.views.magic_start
+   app.api.auth.views.user_login
+   app.api.auth.views.refresh_token
+   app.api.auth.views.refresh_token_admin
+   app.api.auth.views.admin_login
+   app.api.auth.views.otp_start_sms
+   app.api.auth.views.otp_start_email
+   app.api.auth.views.otp_login_email
+   app.api.auth.views.otp_login_sms
+   app.api.auth.views.oid_login
+   app.api.auth.views.recover_verify
+   app.api.auth.views.delete_self
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   app.api.auth.views.router
+
+
+.. py:data:: router
+   
+
+   
+
+.. py:function:: create_user(user: app.api.user.schema.UserCreate) -> Union[Union[dict[str, Any], app.api.admin.schema.Response, None, str], Any]
+   :async:
+
+   The create_user function creates a new user in the database.
+   It takes in a UserCreate object and returns an error if it cannot create the user.
+   Otherwise, it returns the newly created user's id.
+
+   Phone number will accept any form as long as it starts with a +1.
+   Birthday has to be in format year-month-day.
+   Username cannot contain special characters.
+
+   :param user:schema.UserCreate: Used to Pass in the user object.
+   :return: A dictionary with a key "error" if the creation fails.
+
+
+.. py:function:: magic_start(user: app.api.user.schema.UserLogin) -> dict
+   :async:
+
+   The magic_start function sends a magic link to the user's phone number.
+   The magic link is a token that will allow them to login without having their password.
+   Phone number can be any form as long as it exists in the db.
+
+   :param user:schema.UserLogin: Used to Pass in the user's phone number and password.
+   :return: A dictionary with the error key and value.
+
+
+.. py:function:: user_login(token: str)
+   :async:
+
+   The user_login function takes a token and returns a RedirectResponse to the Insiders app.
+
+   The user_login function accepts one argument, `token`, which is used to confirm that the user
+   has been authenticated. If so, it returns a RedirectResponse with an authorization header containing
+   an access token for use in subsequent requests.
+
+   :param token:str: Used to Pass the token that is passed in the url.
+   :return: A redirect response object.
+
+
+
+
+.. py:function:: refresh_token(request: fastapi.Request)
+   :async:
+
+   The refresh_token function is used to generate a new access token from the refresh token.
+   The function takes in the request object and returns an updated access token.
+
+   :param request:Request: Used to Get the request object from the asgi server.
+   :return: A token that is signed with the refresh_token key.
+
+
+
+.. py:function:: refresh_token_admin(request: fastapi.Request)
+
+   The refresh_token_admin function is used to refresh the token of an admin user.
+   It takes a request object as its only parameter and returns a dictionary with two keys:
+   'access_token' and 'refresh_token'. The access token is for the current session, while the
+   refresh token is for future sessions.
+
+   :param request:Request: Used to Get the refresh token from the request.
+   :return: A dictionary containing the following keys:.
+
+
+.. py:function:: admin_login(user: app.api.user.schema.AdminLogin) -> dict
+   :async:
+
+   The admin_login function takes a user object and returns a JWT token.
+   The function uses the Auth0 email_token method to generate an access token for the admin user.
+
+   :param user:schema.AdminLogin: Used to Pass in the user object.
+   :return: A dictionary with a jwt token.
+
+
+.. py:function:: otp_start_sms(user: app.api.auth.schema.SMSStart)
+   :async:
+
+   The otp_start_sms function is used to send a text message containing an OTP
+   to the user's phone number. The function takes in a schema.SMSStart object,
+   which contains the user's phone number and request language preference. If no
+   user exists with that phone number, then an error is returned.
+
+   :param user:schema.SMSStart: Used to Pass the phone number of the user.
+   :return: A dictionary with the following keys:.
+
+
+
+.. py:function:: otp_start_email(user: app.api.auth.schema.EmailStart)
+   :async:
+
+   The otp_start_email function sends an email to the user with a link to start the OTP flow.
+
+   :param user:schema.EmailStart: Used to Specify the email address to send the otp.
+   :return: A string that is the email address of the user.
+
+
+
+
+.. py:function:: otp_login_email(user: app.api.auth.schema.EmailLogin)
+   :async:
+
+   The otp_login_email function is used to log in a user with an email and password.
+   It takes the user's email and password as input, authenticates them using Auth0,
+   and returns the JWT token for that user.
+
+   :param user:schema.EmailLogin: Used to Pass the email and password to the auth0.
+   :return: An auth0 response object.
+
+
+
+.. py:function:: otp_login_sms(user: app.api.auth.schema.SMSLogin)
+   :async:
+
+   The otp_login_sms function is used to authenticate a user via SMS.
+   It takes in a phone number and sends an OTP code to that phone number,
+   then returns the JWT refresh token for that user. If the phone number is not found, it will return None.
+
+   :param user:schema.SMSLogin: Used to Validate the user's input.
+   :return: A dictionary with the following keys:.
+
+
+.. py:function:: oid_login(request: app.api.auth.schema.OIDLogin)
+   :async:
+
+   The oid_login function accepts a request object, which is used to pass the
+   code that was returned by Auth0 after the user has logged in. The function then
+   fetches an access token and id_token from Auth0 using this code as its input. If
+   the fetching of these tokens succeeds, it returns a response object with no error; if not, it returns an error message.
+
+   :param request:schema.OIDLogin: Used to Validate the input.
+   :return: A dictionary containing the access token and id token.
+
+
+.. py:function:: recover_verify(user: app.api.auth.schema.Recovery) -> dict
+   :async:
+
+   The recover_verify function is used to verify the user's email address.
+   It takes a user object and returns a dictionary with two keys: success,
+   which is True if the verification was successful, and response, which
+   contains an error message if there was one.
+
+   :param user:schema.Recovery: Used to Pass the email address of the user that is requesting a password reset.
+   :return: A dictionary with the key "success" and if it is true, a response message.
+
+
+
+.. py:function:: delete_self(request: fastapi.Request)
+   :async:
+
+   The delete_self function will delete the user's account.
+
+   :param request:Request: Used to Get the user who is currently logged in.
+   :return: A boolean value.
+
+
+

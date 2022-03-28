@@ -1,0 +1,67 @@
+:py:mod:`app.api.auth.tests.test_users`
+=======================================
+
+.. py:module:: app.api.auth.tests.test_users
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   app.api.auth.tests.test_users.test_create_user
+   app.api.auth.tests.test_users.test_create_user_exists
+   app.api.auth.tests.test_users.test_login
+   app.api.auth.tests.test_users.test_email_confirm
+   app.api.auth.tests.test_users.test_login_fail
+   app.api.auth.tests.test_users.test_recovery_token
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   app.api.auth.tests.test_users.client
+   app.api.auth.tests.test_users.test_new_user
+   app.api.auth.tests.test_users.test_user
+
+
+.. py:data:: client
+   
+
+   
+
+.. py:data:: test_new_user
+   
+
+   
+
+.. py:data:: test_user
+   
+
+   
+
+.. py:function:: test_create_user()
+
+
+.. py:function:: test_create_user_exists()
+
+
+.. py:function:: test_login()
+
+
+.. py:function:: test_email_confirm()
+
+
+.. py:function:: test_login_fail()
+
+
+.. py:function:: test_recovery_token()
+
+

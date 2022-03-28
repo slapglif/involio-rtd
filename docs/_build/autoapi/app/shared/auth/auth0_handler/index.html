@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>app.shared.auth.auth0_handler &mdash; Involio Backend 0.0.3 documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../index.html" class="icon icon-home"> Involio Backend
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Involio Backend</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">app.shared.auth.auth0_handler</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/autoapi/app/shared/auth/auth0_handler/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-app.shared.auth.auth0_handler">
+<span id="app-shared-auth-auth0-handler"></span><h1><a class="reference internal" href="#module-app.shared.auth.auth0_handler" title="app.shared.auth.auth0_handler"><code class="xref py py-mod docutils literal notranslate"><span class="pre">app.shared.auth.auth0_handler</span></code></a><a class="headerlink" href="#module-app.shared.auth.auth0_handler" title="Permalink to this headline"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline"></a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.shared.auth.auth0_handler.sms_start" title="app.shared.auth.auth0_handler.sms_start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sms_start</span></code></a>(user)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.shared.auth.auth0_handler.sms_token" title="app.shared.auth.auth0_handler.sms_token"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sms_token</span></code></a>(user)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.shared.auth.auth0_handler.email_start" title="app.shared.auth.auth0_handler.email_start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">email_start</span></code></a>(user)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.shared.auth.auth0_handler.email_token" title="app.shared.auth.auth0_handler.email_token"><code class="xref py py-obj docutils literal notranslate"><span class="pre">email_token</span></code></a>(user)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.shared.auth.auth0_handler.authorize_user" title="app.shared.auth.auth0_handler.authorize_user"><code class="xref py py-obj docutils literal notranslate"><span class="pre">authorize_user</span></code></a>(state=None, connection=None)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.shared.auth.auth0_handler.fetch_token" title="app.shared.auth.auth0_handler.fetch_token"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fetch_token</span></code></a>(code)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.shared.auth.auth0_handler.verify_token" title="app.shared.auth.auth0_handler.verify_token"><code class="xref py py-obj docutils literal notranslate"><span class="pre">verify_token</span></code></a>(id_token)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.shared.auth.auth0_handler.client_id" title="app.shared.auth.auth0_handler.client_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">client_id</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.shared.auth.auth0_handler.client_secret" title="app.shared.auth.auth0_handler.client_secret"><code class="xref py py-obj docutils literal notranslate"><span class="pre">client_secret</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.shared.auth.auth0_handler.domain" title="app.shared.auth.auth0_handler.domain"><code class="xref py py-obj docutils literal notranslate"><span class="pre">domain</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="app.shared.auth.auth0_handler.client_id">
+<span class="sig-prename descclassname"><span class="pre">app.shared.auth.auth0_handler.</span></span><span class="sig-name descname"><span class="pre">client_id</span></span><a class="headerlink" href="#app.shared.auth.auth0_handler.client_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="app.shared.auth.auth0_handler.client_secret">
+<span class="sig-prename descclassname"><span class="pre">app.shared.auth.auth0_handler.</span></span><span class="sig-name descname"><span class="pre">client_secret</span></span><a class="headerlink" href="#app.shared.auth.auth0_handler.client_secret" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="app.shared.auth.auth0_handler.domain">
+<span class="sig-prename descclassname"><span class="pre">app.shared.auth.auth0_handler.</span></span><span class="sig-name descname"><span class="pre">domain</span></span><a class="headerlink" href="#app.shared.auth.auth0_handler.domain" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.shared.auth.auth0_handler.sms_start">
+<span class="sig-prename descclassname"><span class="pre">app.shared.auth.auth0_handler.</span></span><span class="sig-name descname"><span class="pre">sms_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.shared.auth.auth0_handler.sms_start" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.shared.auth.auth0_handler.sms_token">
+<span class="sig-prename descclassname"><span class="pre">app.shared.auth.auth0_handler.</span></span><span class="sig-name descname"><span class="pre">sms_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.shared.auth.auth0_handler.sms_token" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.shared.auth.auth0_handler.email_start">
+<span class="sig-prename descclassname"><span class="pre">app.shared.auth.auth0_handler.</span></span><span class="sig-name descname"><span class="pre">email_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.shared.auth.auth0_handler.email_start" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.shared.auth.auth0_handler.email_token">
+<span class="sig-prename descclassname"><span class="pre">app.shared.auth.auth0_handler.</span></span><span class="sig-name descname"><span class="pre">email_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.shared.auth.auth0_handler.email_token" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.shared.auth.auth0_handler.authorize_user">
+<span class="sig-prename descclassname"><span class="pre">app.shared.auth.auth0_handler.</span></span><span class="sig-name descname"><span class="pre">authorize_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.shared.auth.auth0_handler.authorize_user" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.shared.auth.auth0_handler.fetch_token">
+<span class="sig-prename descclassname"><span class="pre">app.shared.auth.auth0_handler.</span></span><span class="sig-name descname"><span class="pre">fetch_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.shared.auth.auth0_handler.fetch_token" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.shared.auth.auth0_handler.verify_token">
+<span class="sig-prename descclassname"><span class="pre">app.shared.auth.auth0_handler.</span></span><span class="sig-name descname"><span class="pre">verify_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id_token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.shared.auth.auth0_handler.verify_token" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Michael Brown.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

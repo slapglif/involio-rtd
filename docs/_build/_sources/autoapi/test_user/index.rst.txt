@@ -1,0 +1,26 @@
+:py:mod:`test_user`
+===================
+
+.. py:module:: test_user
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   test_user.test_set_name
+   test_user.test_load_user
+
+
+
+.. py:function:: test_set_name()
+
+
+.. py:function:: test_load_user()
+
+

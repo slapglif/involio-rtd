@@ -1,0 +1,141 @@
+:py:mod:`page_schema`
+=====================
+
+.. py:module:: page_schema
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   page_schema.Params
+   page_schema.Filter
+   page_schema.Post
+   page_schema.GetOptionalContextPages
+   page_schema.GetPages
+   page_schema.GetCommentPages
+   page_schema.PagedResponse
+
+
+
+
+.. py:class:: Params
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   .. py:class:: Config
+
+      .. py:attribute:: schema_extra
+         
+
+         
+
+
+   .. py:attribute:: page
+      :annotation: :int
+
+      
+
+   .. py:attribute:: size
+      :annotation: :int
+
+      
+
+
+.. py:class:: Filter
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   .. py:class:: Config
+
+      .. py:attribute:: schema_extra
+         
+
+         
+
+
+   .. py:attribute:: filter
+      :annotation: :str
+
+      
+
+
+.. py:class:: Post
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   .. py:attribute:: post_id
+      :annotation: :uuid.UUID
+
+      
+
+
+.. py:class:: GetOptionalContextPages
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   .. py:attribute:: context
+      :annotation: :Optional[Filter]
+
+      
+
+   .. py:attribute:: params
+      :annotation: :Params
+
+      
+
+
+.. py:class:: GetPages
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   .. py:attribute:: context
+      :annotation: :Filter
+
+      
+
+   .. py:attribute:: params
+      :annotation: :Params
+
+      
+
+
+.. py:class:: GetCommentPages
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   .. py:attribute:: context
+      :annotation: :Post
+
+      
+
+   .. py:attribute:: params
+      :annotation: :Params
+
+      
+
+
+.. py:class:: PagedResponse
+
+   Bases: :py:obj:`app.shared.schemas.ResponseSchemas.BaseResponse`
+
+   .. py:attribute:: items
+      :annotation: :List[fastapi.types.Any]
+
+      
+
+   .. py:attribute:: page
+      :annotation: :int
+
+      
+
+   .. py:attribute:: page_size
+      :annotation: :int
+
+      
+
+

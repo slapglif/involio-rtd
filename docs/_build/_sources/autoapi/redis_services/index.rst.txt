@@ -1,0 +1,132 @@
+:py:mod:`redis_services`
+========================
+
+.. py:module:: redis_services
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   redis_services.Register
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   redis_services.create_stream
+   redis_services.write_stream
+   redis_services.stream_info
+   redis_services.delete_msg
+   redis_services.delete_stream
+   redis_services.create_group
+   redis_services.groups_info
+   redis_services.delete_group
+   redis_services.consumers_info
+   redis_services.delete_consumer
+   redis_services.reader
+   redis_services.subscribe
+   redis_services.publish
+   redis_services.consume_new_group_event
+   redis_services.consume_pending_group_events
+   redis_services.ack_stream
+   redis_services.handle_consumer_data
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   redis_services.redis
+
+
+.. py:data:: redis
+   
+
+   
+
+.. py:function:: create_stream(name: str, fields: dict) -> str
+   :async:
+
+
+.. py:function:: write_stream(name: str, fields: dict) -> str
+   :async:
+
+
+.. py:function:: stream_info(stream: str) -> dict
+   :async:
+
+
+.. py:function:: delete_msg(stream: str, ids: list) -> str
+   :async:
+
+
+.. py:function:: delete_stream(name: str) -> str
+   :async:
+
+
+.. py:function:: create_group(stream: str, group: str) -> str
+   :async:
+
+
+.. py:function:: groups_info(stream: str) -> dict
+   :async:
+
+
+.. py:function:: delete_group(stream: str, group: str) -> str
+   :async:
+
+
+.. py:function:: consumers_info(stream: str, group: str) -> dict
+   :async:
+
+
+.. py:function:: delete_consumer(stream: str, group: str, consumer: str) -> str
+   :async:
+
+
+.. py:function:: reader(channel: aioredis.client.PubSub)
+   :async:
+
+
+.. py:function:: subscribe(channels: list)
+   :async:
+
+
+.. py:function:: publish(channels: list, message: dict)
+   :async:
+
+
+.. py:function:: consume_new_group_event(consumer: str, stream: str, group: str) -> list
+   :async:
+
+
+.. py:function:: consume_pending_group_events(consumer: str, stream: str, group: str) -> list
+   :async:
+
+
+.. py:class:: Register(**kwargs)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: __call__(self, fn)
+
+
+
+.. py:function:: ack_stream(stream: str, group: str, ids: list)
+   :async:
+
+
+.. py:function:: handle_consumer_data(consumer_data: list, stream: str, group: str)
+   :async:
+
+

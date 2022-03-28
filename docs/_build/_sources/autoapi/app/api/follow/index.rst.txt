@@ -1,0 +1,26 @@
+:py:mod:`app.api.follow`
+========================
+
+.. py:module:: app.api.follow
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   tests/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   models/index.rst
+   schema/index.rst
+   views/index.rst
+
+

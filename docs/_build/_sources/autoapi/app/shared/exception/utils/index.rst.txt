@@ -1,0 +1,29 @@
+:py:mod:`app.shared.exception.utils`
+====================================
+
+.. py:module:: app.shared.exception.utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   app.shared.exception.utils.safe
+
+
+
+.. py:function:: safe(function)
+
+   The safe function is a decorator that wraps the passed in function and returns
+   a safe version of it. A safe version of a function does not raise any errors, but instead
+   returns None if an error occurs.
+
+   :param function: Used to Pass the function to be decorated.
+   :return: A function that returns a dictionary of the arguments passed to it.
+
+

@@ -1,0 +1,188 @@
+:py:mod:`app`
+=============
+
+.. py:module:: app
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   api/index.rst
+   shared/index.rst
+
+
+Package Contents
+----------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   app.ModelMixin
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   app.app
+   app.origins
+   app.celery
+   app.task_protocol
+
+
+.. py:class:: ModelMixin
+
+   Bases: :py:obj:`Base`
+
+   Generic Mixin Model to provide helper functions that all Model classes need
+
+   .. py:attribute:: __abstract__
+      :annotation: = True
+
+      
+
+   .. py:method:: get_or_create(cls: ModelType, *_, **kwargs) -> ModelType
+      :classmethod:
+
+      The get_or_create function is a helper function that will either get an object or create it if it doesn't exist.
+      For example, let's say we have a model called User with two fields: username and email.
+      We want to be able to easily create new users based on their username and email address, but we also
+      want our API endpoints (and other parts of our code) to check whether a user already exists before creating them.
+
+      :param cls:ModelType: Used to Specify the model class that will be used to create or retrieve an instance.
+      :param *_: Used to Ignore the first positional argument.
+      :param **kwargs: Used to Pass in all the fields of the model.
+      :return: A tuple containing the object and a boolean value indicating whether it was created.
+
+
+   .. py:method:: map_to_model(cls, model: Type[pydantic.BaseModel], db_response: Union[sqlalchemy.engine.Row, List[sqlalchemy.engine.Row]])
+      :classmethod:
+
+      The map_to_model function takes a model and a list of tuples,
+      and returns the same list of tuples with each tuple converted into an instance
+      of the given model. For example:
+
+          map_to_model(User, [('user-id', 'username'), ('user-id2', 'username2')])
+          # Returns [User(user_id='user-id', username='username'), User(...)]
+
+      :param model:Type[BaseModel]: Used to Specify the model that is used to create a list of instances.
+      :param db_response:Union[Row: Used to Determine if the db_response is a list of keyed tuples or just one.
+      :param List[Row]]: Used to Check if the db_response is a list of keyed tuples.
+      :return: An instance of the model class with properties mapped to value from the db_response.
+
+
+   .. py:method:: rebuild(cls, kwargs: dict) -> dict
+      :classmethod:
+
+      The rebuild function takes a dictionary of data and returns a new dictionary
+      with the following changes:
+          - The created_at field is set to the current time.
+          - If an id value is not provided, one will be generated.
+
+          Args:
+              kwargs (dict): A dictionary of data to rebuild into a model instance.
+
+          Returns:
+              dict: A rebuilt model instance with all fields updated and any missing ids added.
+
+      :param kwargs:dict: Used to Pass in the dictionary of arguments that is being passed into the function.
+      :return: A dictionary.
+
+
+   .. py:method:: build_filters(cls, kwargs: dict, constraints: list = None) -> dict
+      :classmethod:
+
+      The build_filters function takes a dictionary of keyword arguments and returns a dictionary of
+      filters that can be used to query the database. The returned filters are constrained by the
+      keyword arguments passed in, which are also used as the keys for the returned filters. If no
+      constraints are provided, all keyword arguments will be used as constraints.
+
+      :param kwargs:dict: Used to Pass in the dictionary of parameters that we want to filter on.
+      :param constraints:list=None: Used to Specify which constraints to apply.
+      :return: A dictionary of filters.
+
+
+   .. py:method:: get_filters(cls, context: pydantic.BaseModel = None, kwargs: dict = None)
+      :classmethod:
+
+      The get_filters function is a helper function that takes in the context and kwargs
+      and returns a dictionary of filters. The get_filters function is used by all the
+      endpoints to filter their results.
+
+      :param context:BaseModel=None: Used to Pass the context of the request.
+      :param kwargs:dict=None: Used to Pass in any additional keyword arguments that are passed into the function.
+      :return: A dictionary of filters.
+
+
+   .. py:method:: get_owner_context(cls, request: starlette.requests.Request, context: pydantic.BaseModel) -> Tuple[sqlalchemy.dialects.postgresql.UUID, dict]
+      :classmethod:
+
+      The get_owner_context function accepts a request and context object as arguments.
+      It returns the owner_id of the user making the request, and a dictionary containing
+      the values from the context object that are not None or empty strings.
+
+      :param request:Request: Used to Get the user id of the current logged-in user.
+      :param context:BaseModel: Used to Get the fields of the model that are not none or empty strings.
+      :return: The owner_id of the user making the request, and a dictionary containing.
+
+
+   .. py:method:: get_kwarg_dependencies(cls, kwargs)
+      :classmethod:
+
+      The get_kwarg_dependencies function takes a dictionary of keyword arguments and removes any keyword
+      arguments that do not contain an _id field, which is the default requirement of any user identity object.
+
+      :param kwargs: Used to Store the arguments passed to a function.
+      :return: A list of the dependencies for a given kwarg.
+
+
+   .. py:method:: get_id_args(cls, *_, **kwargs)
+      :staticmethod:
+
+
+   .. py:method:: get_constraints(kwargs, constraints: List[str])
+      :staticmethod:
+
+
+   .. py:method:: build_response(cls: ModelType = None, object_data: Any = None, error: str = None, overload: dict = None) -> dict
+      :classmethod:
+
+      The build_response function takes a list of database objects and returns a dictionary with the following structure:
+
+      "success": True, or False if no data was returned from the database.
+      "<Model Name>": [<database object>] The actual data that was returned from the database.        :param overload: custom dictionary to overload the response with
+      :param error: Custom Error message if any
+      :param object_data: Optional data to include in the response
+      :param cls: Used to Access variables that belongs to the class.
+      :return: A dictionary with a key of success and the data.
+
+
+
+.. py:data:: app
+   
+
+   
+
+.. py:data:: origins
+   :annotation: = ['http://localhost', 'http://localhost:80', 'http://localhost:3000']
+
+   
+
+.. py:data:: celery
+   
+
+   
+
+.. py:data:: task_protocol
+   :annotation: = 1
+
+   
+

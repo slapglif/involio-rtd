@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>app.api.auth.schema &mdash; Involio Backend 0.0.3 documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../index.html" class="icon icon-home"> Involio Backend
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Involio Backend</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">app.api.auth.schema</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/autoapi/app/api/auth/schema/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-app.api.auth.schema">
+<span id="app-api-auth-schema"></span><h1><a class="reference internal" href="#module-app.api.auth.schema" title="app.api.auth.schema"><code class="xref py py-mod docutils literal notranslate"><span class="pre">app.api.auth.schema</span></code></a><a class="headerlink" href="#module-app.api.auth.schema" title="Permalink to this headline"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.auth.schema.UserRecovery" title="app.api.auth.schema.UserRecovery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UserRecovery</span></code></a></p></td>
+<td><p>The UserRecovery class is a model that contains the information about a user's password recovery</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.auth.schema.Recovery" title="app.api.auth.schema.Recovery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Recovery</span></code></a></p></td>
+<td><p>The Recovery class is a model that represents a recovery</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.auth.schema.Response" title="app.api.auth.schema.Response"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Response</span></code></a></p></td>
+<td><p>The Response class is a model that represents a response to a question</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.auth.schema.RecoveryResponse" title="app.api.auth.schema.RecoveryResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RecoveryResponse</span></code></a></p></td>
+<td><p>The above class is a model that represents the response to a recovery request</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.auth.schema.SMSStart" title="app.api.auth.schema.SMSStart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SMSStart</span></code></a></p></td>
+<td><p>SMSStart class is a model that represents the start of an SMS message</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.auth.schema.EmailStart" title="app.api.auth.schema.EmailStart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EmailStart</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.auth.schema.SMSLogin" title="app.api.auth.schema.SMSLogin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SMSLogin</span></code></a></p></td>
+<td><p>SMSLogin class is a model that represents the start of an SMS message</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.auth.schema.EmailLogin" title="app.api.auth.schema.EmailLogin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EmailLogin</span></code></a></p></td>
+<td><p>The EmailLogin class is a model that represents a user's login credentials</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.auth.schema.SMSStartResponse" title="app.api.auth.schema.SMSStartResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SMSStartResponse</span></code></a></p></td>
+<td><p>A SMSStartResponse is a model that represents the response to a</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.auth.schema.EmailStartResponse" title="app.api.auth.schema.EmailStartResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EmailStartResponse</span></code></a></p></td>
+<td><p>An email start response is a response to the start email verification endpoint</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.auth.schema.OTPLoginResponse" title="app.api.auth.schema.OTPLoginResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OTPLoginResponse</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.auth.schema.OIDLogin" title="app.api.auth.schema.OIDLogin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OIDLogin</span></code></a></p></td>
+<td><p>OIDLogin is a class that represents a user's login to the system</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.auth.schema.OIDResponse" title="app.api.auth.schema.OIDResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OIDResponse</span></code></a></p></td>
+<td><p>OIDResponse tells the Python interpreter that this class will be used</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.auth.schema.RefreshTokenResponse" title="app.api.auth.schema.RefreshTokenResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RefreshTokenResponse</span></code></a></p></td>
+<td><p>RefreshTokenResponse tells the API what to expect when it gets a response from the server.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.auth.schema.UserRecovery">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.schema.</span></span><span class="sig-name descname"><span class="pre">UserRecovery</span></span><a class="headerlink" href="#app.api.auth.schema.UserRecovery" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">fastapi_camelcase.CamelModel</span></code></p>
+<p>The UserRecovery class is a model that contains the information about a user’s password recovery</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.auth.schema.UserRecovery.Config">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#app.api.auth.schema.UserRecovery.Config" title="Permalink to this definition"></a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.UserRecovery.Config.schema_extra">
+<span class="sig-name descname"><span class="pre">schema_extra</span></span><a class="headerlink" href="#app.api.auth.schema.UserRecovery.Config.schema_extra" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.UserRecovery.email">
+<span class="sig-name descname"><span class="pre">email</span></span><em class="property"><span class="w"> </span><span class="pre">:pydantic.EmailStr</span></em><a class="headerlink" href="#app.api.auth.schema.UserRecovery.email" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.auth.schema.Recovery">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.schema.</span></span><span class="sig-name descname"><span class="pre">Recovery</span></span><a class="headerlink" href="#app.api.auth.schema.Recovery" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">fastapi_camelcase.CamelModel</span></code></p>
+<p>The Recovery class is a model that represents a recovery</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.auth.schema.Recovery.Config">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#app.api.auth.schema.Recovery.Config" title="Permalink to this definition"></a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.Recovery.Config.schema_extra">
+<span class="sig-name descname"><span class="pre">schema_extra</span></span><a class="headerlink" href="#app.api.auth.schema.Recovery.Config.schema_extra" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.Recovery.email">
+<span class="sig-name descname"><span class="pre">email</span></span><em class="property"><span class="w"> </span><span class="pre">:pydantic.EmailStr</span></em><a class="headerlink" href="#app.api.auth.schema.Recovery.email" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.Recovery.code">
+<span class="sig-name descname"><span class="pre">code</span></span><em class="property"><span class="w"> </span><span class="pre">:str</span></em><a class="headerlink" href="#app.api.auth.schema.Recovery.code" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.Recovery.password">
+<span class="sig-name descname"><span class="pre">password</span></span><em class="property"><span class="w"> </span><span class="pre">:str</span></em><a class="headerlink" href="#app.api.auth.schema.Recovery.password" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.auth.schema.Response">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.schema.</span></span><span class="sig-name descname"><span class="pre">Response</span></span><a class="headerlink" href="#app.api.auth.schema.Response" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">app.shared.schemas.ResponseSchemas.BaseResponse</span></code></p>
+<p>The Response class is a model that represents a response to a question</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.Response.error">
+<span class="sig-name descname"><span class="pre">error</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.auth.schema.Response.error" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.Response.response">
+<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.auth.schema.Response.response" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.Response.success">
+<span class="sig-name descname"><span class="pre">success</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[bool]</span></em><a class="headerlink" href="#app.api.auth.schema.Response.success" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.auth.schema.RecoveryResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.schema.</span></span><span class="sig-name descname"><span class="pre">RecoveryResponse</span></span><a class="headerlink" href="#app.api.auth.schema.RecoveryResponse" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">app.shared.schemas.ResponseSchemas.BaseResponse</span></code></p>
+<p>The above class is a model that represents the response to a recovery request</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.RecoveryResponse.error">
+<span class="sig-name descname"><span class="pre">error</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.auth.schema.RecoveryResponse.error" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.RecoveryResponse.success">
+<span class="sig-name descname"><span class="pre">success</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[bool]</span></em><a class="headerlink" href="#app.api.auth.schema.RecoveryResponse.success" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.RecoveryResponse.recovery_token">
+<span class="sig-name descname"><span class="pre">recovery_token</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.auth.schema.RecoveryResponse.recovery_token" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.auth.schema.SMSStart">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.schema.</span></span><span class="sig-name descname"><span class="pre">SMSStart</span></span><a class="headerlink" href="#app.api.auth.schema.SMSStart" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">fastapi_camelcase.CamelModel</span></code></p>
+<p>SMSStart class is a model that represents the start of an SMS message</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.auth.schema.SMSStart.Config">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#app.api.auth.schema.SMSStart.Config" title="Permalink to this definition"></a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.SMSStart.Config.schema_extra">
+<span class="sig-name descname"><span class="pre">schema_extra</span></span><a class="headerlink" href="#app.api.auth.schema.SMSStart.Config.schema_extra" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.SMSStart.phone">
+<span class="sig-name descname"><span class="pre">phone</span></span><em class="property"><span class="w"> </span><span class="pre">:str</span></em><a class="headerlink" href="#app.api.auth.schema.SMSStart.phone" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.auth.schema.EmailStart">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.schema.</span></span><span class="sig-name descname"><span class="pre">EmailStart</span></span><a class="headerlink" href="#app.api.auth.schema.EmailStart" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">fastapi_camelcase.CamelModel</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.auth.schema.EmailStart.Config">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#app.api.auth.schema.EmailStart.Config" title="Permalink to this definition"></a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.EmailStart.Config.schema_extra">
+<span class="sig-name descname"><span class="pre">schema_extra</span></span><a class="headerlink" href="#app.api.auth.schema.EmailStart.Config.schema_extra" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.EmailStart.email">
+<span class="sig-name descname"><span class="pre">email</span></span><em class="property"><span class="w"> </span><span class="pre">:str</span></em><a class="headerlink" href="#app.api.auth.schema.EmailStart.email" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.auth.schema.SMSLogin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.schema.</span></span><span class="sig-name descname"><span class="pre">SMSLogin</span></span><a class="headerlink" href="#app.api.auth.schema.SMSLogin" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">fastapi_camelcase.CamelModel</span></code></p>
+<p>SMSLogin class is a model that represents the start of an SMS message</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.auth.schema.SMSLogin.Config">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#app.api.auth.schema.SMSLogin.Config" title="Permalink to this definition"></a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.SMSLogin.Config.schema_extra">
+<span class="sig-name descname"><span class="pre">schema_extra</span></span><a class="headerlink" href="#app.api.auth.schema.SMSLogin.Config.schema_extra" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.SMSLogin.phone">
+<span class="sig-name descname"><span class="pre">phone</span></span><em class="property"><span class="w"> </span><span class="pre">:str</span></em><a class="headerlink" href="#app.api.auth.schema.SMSLogin.phone" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.SMSLogin.code">
+<span class="sig-name descname"><span class="pre">code</span></span><em class="property"><span class="w"> </span><span class="pre">:str</span></em><a class="headerlink" href="#app.api.auth.schema.SMSLogin.code" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.auth.schema.EmailLogin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.schema.</span></span><span class="sig-name descname"><span class="pre">EmailLogin</span></span><a class="headerlink" href="#app.api.auth.schema.EmailLogin" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">fastapi_camelcase.CamelModel</span></code></p>
+<p>The EmailLogin class is a model that represents a user’s login credentials</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.auth.schema.EmailLogin.Config">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#app.api.auth.schema.EmailLogin.Config" title="Permalink to this definition"></a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.EmailLogin.Config.schema_extra">
+<span class="sig-name descname"><span class="pre">schema_extra</span></span><a class="headerlink" href="#app.api.auth.schema.EmailLogin.Config.schema_extra" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.EmailLogin.email">
+<span class="sig-name descname"><span class="pre">email</span></span><em class="property"><span class="w"> </span><span class="pre">:str</span></em><a class="headerlink" href="#app.api.auth.schema.EmailLogin.email" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.EmailLogin.code">
+<span class="sig-name descname"><span class="pre">code</span></span><em class="property"><span class="w"> </span><span class="pre">:str</span></em><a class="headerlink" href="#app.api.auth.schema.EmailLogin.code" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.auth.schema.SMSStartResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.schema.</span></span><span class="sig-name descname"><span class="pre">SMSStartResponse</span></span><a class="headerlink" href="#app.api.auth.schema.SMSStartResponse" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">app.shared.schemas.ResponseSchemas.BaseResponse</span></code></p>
+<p>A SMSStartResponse is a model that represents the response to a</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.SMSStartResponse.response">
+<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[uuid.UUID]</span></em><a class="headerlink" href="#app.api.auth.schema.SMSStartResponse.response" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.SMSStartResponse.phone_number">
+<span class="sig-name descname"><span class="pre">phone_number</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.auth.schema.SMSStartResponse.phone_number" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.SMSStartResponse.phone_verified">
+<span class="sig-name descname"><span class="pre">phone_verified</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[bool]</span></em><a class="headerlink" href="#app.api.auth.schema.SMSStartResponse.phone_verified" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.SMSStartResponse.request_language">
+<span class="sig-name descname"><span class="pre">request_language</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.auth.schema.SMSStartResponse.request_language" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.SMSStartResponse.error">
+<span class="sig-name descname"><span class="pre">error</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.auth.schema.SMSStartResponse.error" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.auth.schema.EmailStartResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.schema.</span></span><span class="sig-name descname"><span class="pre">EmailStartResponse</span></span><a class="headerlink" href="#app.api.auth.schema.EmailStartResponse" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">app.shared.schemas.ResponseSchemas.BaseResponse</span></code></p>
+<p>An email start response is a response to the start email verification endpoint</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.EmailStartResponse.response">
+<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[uuid.UUID]</span></em><a class="headerlink" href="#app.api.auth.schema.EmailStartResponse.response" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.EmailStartResponse.email">
+<span class="sig-name descname"><span class="pre">email</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.auth.schema.EmailStartResponse.email" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.EmailStartResponse.email_verified">
+<span class="sig-name descname"><span class="pre">email_verified</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[bool]</span></em><a class="headerlink" href="#app.api.auth.schema.EmailStartResponse.email_verified" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.EmailStartResponse.error">
+<span class="sig-name descname"><span class="pre">error</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.auth.schema.EmailStartResponse.error" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.auth.schema.OTPLoginResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.schema.</span></span><span class="sig-name descname"><span class="pre">OTPLoginResponse</span></span><a class="headerlink" href="#app.api.auth.schema.OTPLoginResponse" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">app.shared.schemas.ResponseSchemas.BaseResponse</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.OTPLoginResponse.access_token">
+<span class="sig-name descname"><span class="pre">access_token</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.auth.schema.OTPLoginResponse.access_token" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.OTPLoginResponse.refresh_token">
+<span class="sig-name descname"><span class="pre">refresh_token</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.auth.schema.OTPLoginResponse.refresh_token" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.OTPLoginResponse.response">
+<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[uuid.UUID]</span></em><a class="headerlink" href="#app.api.auth.schema.OTPLoginResponse.response" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.OTPLoginResponse.id_token">
+<span class="sig-name descname"><span class="pre">id_token</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.auth.schema.OTPLoginResponse.id_token" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.OTPLoginResponse.scope">
+<span class="sig-name descname"><span class="pre">scope</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.auth.schema.OTPLoginResponse.scope" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.OTPLoginResponse.expires_in">
+<span class="sig-name descname"><span class="pre">expires_in</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[int]</span></em><a class="headerlink" href="#app.api.auth.schema.OTPLoginResponse.expires_in" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.OTPLoginResponse.token_type">
+<span class="sig-name descname"><span class="pre">token_type</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.auth.schema.OTPLoginResponse.token_type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.OTPLoginResponse.error">
+<span class="sig-name descname"><span class="pre">error</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.auth.schema.OTPLoginResponse.error" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.auth.schema.OIDLogin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.schema.</span></span><span class="sig-name descname"><span class="pre">OIDLogin</span></span><a class="headerlink" href="#app.api.auth.schema.OIDLogin" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">fastapi_camelcase.CamelModel</span></code></p>
+<p>OIDLogin is a class that represents a user’s login to the system</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.auth.schema.OIDLogin.Config">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#app.api.auth.schema.OIDLogin.Config" title="Permalink to this definition"></a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.OIDLogin.Config.schema_extra">
+<span class="sig-name descname"><span class="pre">schema_extra</span></span><a class="headerlink" href="#app.api.auth.schema.OIDLogin.Config.schema_extra" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.OIDLogin.phone">
+<span class="sig-name descname"><span class="pre">phone</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.auth.schema.OIDLogin.phone" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.OIDLogin.email">
+<span class="sig-name descname"><span class="pre">email</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.auth.schema.OIDLogin.email" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.OIDLogin.code">
+<span class="sig-name descname"><span class="pre">code</span></span><em class="property"><span class="w"> </span><span class="pre">:str</span></em><a class="headerlink" href="#app.api.auth.schema.OIDLogin.code" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.auth.schema.OIDResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.schema.</span></span><span class="sig-name descname"><span class="pre">OIDResponse</span></span><a class="headerlink" href="#app.api.auth.schema.OIDResponse" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">app.shared.schemas.ResponseSchemas.BaseResponse</span></code></p>
+<p>OIDResponse tells the Python interpreter that this class will be used
+to create objects that represent the OIDResponse JSON object in the API.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.OIDResponse.access_token">
+<span class="sig-name descname"><span class="pre">access_token</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.auth.schema.OIDResponse.access_token" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.OIDResponse.id_token">
+<span class="sig-name descname"><span class="pre">id_token</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.auth.schema.OIDResponse.id_token" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.OIDResponse.error">
+<span class="sig-name descname"><span class="pre">error</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.auth.schema.OIDResponse.error" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.auth.schema.RefreshTokenResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.schema.</span></span><span class="sig-name descname"><span class="pre">RefreshTokenResponse</span></span><a class="headerlink" href="#app.api.auth.schema.RefreshTokenResponse" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">app.shared.schemas.ResponseSchemas.BaseResponse</span></code></p>
+<p>RefreshTokenResponse tells the API what to expect when it gets a response from the server.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.RefreshTokenResponse.access_token">
+<span class="sig-name descname"><span class="pre">access_token</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.auth.schema.RefreshTokenResponse.access_token" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.RefreshTokenResponse.success">
+<span class="sig-name descname"><span class="pre">success</span></span><em class="property"><span class="w"> </span><span class="pre">:bool</span></em><a class="headerlink" href="#app.api.auth.schema.RefreshTokenResponse.success" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.auth.schema.RefreshTokenResponse.error">
+<span class="sig-name descname"><span class="pre">error</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.auth.schema.RefreshTokenResponse.error" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Michael Brown.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

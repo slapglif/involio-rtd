@@ -1,0 +1,42 @@
+API Reference
+=============
+
+This page contains auto-generated API reference documentation [#f1]_.
+
+.. toctree::
+   :titlesonly:
+
+   /autoapi/app/index
+   /autoapi/models/index
+   /autoapi/schema/index
+   /autoapi/views/index
+   /autoapi/tests/index
+   /autoapi/test_feed/index
+   /autoapi/test_user_files/index
+   /autoapi/test_interest/index
+   /autoapi/test_investments/index
+   /autoapi/test_like_add/index
+   /autoapi/test_user_portfolios/index
+   /autoapi/test_drafts/index
+   /autoapi/test_profile/index
+   /autoapi/test_review/index
+   /autoapi/test_strategy/index
+   /autoapi/test_user/index
+   /autoapi/routes/index
+   /autoapi/urls/index
+   /autoapi/mailgun/index
+   /autoapi/auth/index
+   /autoapi/json_encoders/index
+   /autoapi/cache/index
+   /autoapi/redis_services/index
+   /autoapi/download/index
+   /autoapi/upload/index
+   /autoapi/ExceptionSchema/index
+   /autoapi/orm_schema/index
+   /autoapi/page_schema/index
+   /autoapi/RequestSchemas/index
+   /autoapi/ResponseSchemas/index
+   /autoapi/search/index
+   /autoapi/sms/index
+
+.. [#f1] Created with `sphinx-autoapi <https://github.com/readthedocs/sphinx-autoapi>`_

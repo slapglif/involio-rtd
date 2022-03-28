@@ -1,0 +1,35 @@
+:py:mod:`app.api.auth.tests.test_overwrite_default_user`
+========================================================
+
+.. py:module:: app.api.auth.tests.test_overwrite_default_user
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   app.api.auth.tests.test_overwrite_default_user.test_overwrite_default_user
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   app.api.auth.tests.test_overwrite_default_user.client
+
+
+.. py:data:: client
+   
+
+   
+
+.. py:function:: test_overwrite_default_user()
+
+

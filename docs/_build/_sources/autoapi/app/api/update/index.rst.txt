@@ -1,0 +1,18 @@
+:py:mod:`app.api.update`
+========================
+
+.. py:module:: app.api.update
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   models/index.rst
+   schema/index.rst
+   utils/index.rst
+   views/index.rst
+
+

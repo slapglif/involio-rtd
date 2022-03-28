@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>app.api.update.schema &mdash; Involio Backend 0.0.3 documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../index.html" class="icon icon-home"> Involio Backend
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Involio Backend</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">app.api.update.schema</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/autoapi/app/api/update/schema/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-app.api.update.schema">
+<span id="app-api-update-schema"></span><h1><a class="reference internal" href="#module-app.api.update.schema" title="app.api.update.schema"><code class="xref py py-mod docutils literal notranslate"><span class="pre">app.api.update.schema</span></code></a><a class="headerlink" href="#module-app.api.update.schema" title="Permalink to this headline"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.update.schema.UpdateLikeCount" title="app.api.update.schema.UpdateLikeCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UpdateLikeCount</span></code></a></p></td>
+<td><p>It's a request schema for the <cite>/update/like</cite> endpoint.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.update.schema.UpdateLikeCountResponse" title="app.api.update.schema.UpdateLikeCountResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UpdateLikeCountResponse</span></code></a></p></td>
+<td><p>It's a response schema that is used to return the number of likes to an update.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.update.schema.CreateStrategyUpdate" title="app.api.update.schema.CreateStrategyUpdate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateStrategyUpdate</span></code></a></p></td>
+<td><p>It's a request schema that is used to create a new strategy update.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.update.schema.CreatePortfolioUpdate" title="app.api.update.schema.CreatePortfolioUpdate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreatePortfolioUpdate</span></code></a></p></td>
+<td><p>It's a request schema for the <cite>/create/portfolio/update</cite> endpoint.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.update.schema.UpdateResponse" title="app.api.update.schema.UpdateResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UpdateResponse</span></code></a></p></td>
+<td><p>It's a response schema that is used to return the number of likes to an update.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.update.schema.Update" title="app.api.update.schema.Update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Update</span></code></a></p></td>
+<td><p>The Update class is a model that contains the information about a single update</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.update.schema.GetStrategyUpdates" title="app.api.update.schema.GetStrategyUpdates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetStrategyUpdates</span></code></a></p></td>
+<td><p>It's a request schema for the <cite>/get/strategy/updates</cite> endpoint.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.update.schema.GetPortfolioUpdates" title="app.api.update.schema.GetPortfolioUpdates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetPortfolioUpdates</span></code></a></p></td>
+<td><p>It's a request schema for the <cite>/get/portfolio/updates</cite> endpoint.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.update.schema.GetUpdatesResponse" title="app.api.update.schema.GetUpdatesResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetUpdatesResponse</span></code></a></p></td>
+<td><p>It's a response schema that is used to return the number of likes to an update.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.update.schema.ModifyUpdate" title="app.api.update.schema.ModifyUpdate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ModifyUpdate</span></code></a></p></td>
+<td><p>It's a request schema for the <cite>/modify/update</cite> endpoint.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.update.schema.ModifyUpdateResponse" title="app.api.update.schema.ModifyUpdateResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ModifyUpdateResponse</span></code></a></p></td>
+<td><p>It's a response schema that is used to return the number of likes to an update.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.update.schema.UpdateLikeCount">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.update.schema.</span></span><span class="sig-name descname"><span class="pre">UpdateLikeCount</span></span><a class="headerlink" href="#app.api.update.schema.UpdateLikeCount" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">fastapi_camelcase.CamelModel</span></code></p>
+<p>It’s a request schema for the <cite>/update/like</cite> endpoint.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.update.schema.UpdateLikeCount.update_id">
+<span class="sig-name descname"><span class="pre">update_id</span></span><em class="property"><span class="w"> </span><span class="pre">:uuid.UUID</span></em><a class="headerlink" href="#app.api.update.schema.UpdateLikeCount.update_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.update.schema.UpdateLikeCountResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.update.schema.</span></span><span class="sig-name descname"><span class="pre">UpdateLikeCountResponse</span></span><a class="headerlink" href="#app.api.update.schema.UpdateLikeCountResponse" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">app.shared.schemas.ResponseSchemas.BaseResponse</span></code></p>
+<p>It’s a response schema that is used to return the number of likes to an update.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.update.schema.UpdateLikeCountResponse.like_count">
+<span class="sig-name descname"><span class="pre">like_count</span></span><em class="property"><span class="w"> </span><span class="pre">:int</span></em><a class="headerlink" href="#app.api.update.schema.UpdateLikeCountResponse.like_count" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.update.schema.CreateStrategyUpdate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.update.schema.</span></span><span class="sig-name descname"><span class="pre">CreateStrategyUpdate</span></span><a class="headerlink" href="#app.api.update.schema.CreateStrategyUpdate" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">fastapi_camelcase.CamelModel</span></code></p>
+<p>It’s a request schema that is used to create a new strategy update.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.update.schema.CreateStrategyUpdate.update_title">
+<span class="sig-name descname"><span class="pre">update_title</span></span><em class="property"><span class="w"> </span><span class="pre">:str</span></em><a class="headerlink" href="#app.api.update.schema.CreateStrategyUpdate.update_title" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.update.schema.CreateStrategyUpdate.update_content">
+<span class="sig-name descname"><span class="pre">update_content</span></span><em class="property"><span class="w"> </span><span class="pre">:str</span></em><a class="headerlink" href="#app.api.update.schema.CreateStrategyUpdate.update_content" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.update.schema.CreateStrategyUpdate.strategy_id">
+<span class="sig-name descname"><span class="pre">strategy_id</span></span><em class="property"><span class="w"> </span><span class="pre">:uuid.UUID</span></em><a class="headerlink" href="#app.api.update.schema.CreateStrategyUpdate.strategy_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.update.schema.CreatePortfolioUpdate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.update.schema.</span></span><span class="sig-name descname"><span class="pre">CreatePortfolioUpdate</span></span><a class="headerlink" href="#app.api.update.schema.CreatePortfolioUpdate" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">fastapi_camelcase.CamelModel</span></code></p>
+<p>It’s a request schema for the <cite>/create/portfolio/update</cite> endpoint.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.update.schema.CreatePortfolioUpdate.update_title">
+<span class="sig-name descname"><span class="pre">update_title</span></span><em class="property"><span class="w"> </span><span class="pre">:str</span></em><a class="headerlink" href="#app.api.update.schema.CreatePortfolioUpdate.update_title" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.update.schema.CreatePortfolioUpdate.update_content">
+<span class="sig-name descname"><span class="pre">update_content</span></span><em class="property"><span class="w"> </span><span class="pre">:str</span></em><a class="headerlink" href="#app.api.update.schema.CreatePortfolioUpdate.update_content" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.update.schema.CreatePortfolioUpdate.portfolio_id">
+<span class="sig-name descname"><span class="pre">portfolio_id</span></span><em class="property"><span class="w"> </span><span class="pre">:uuid.UUID</span></em><a class="headerlink" href="#app.api.update.schema.CreatePortfolioUpdate.portfolio_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.update.schema.UpdateResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.update.schema.</span></span><span class="sig-name descname"><span class="pre">UpdateResponse</span></span><a class="headerlink" href="#app.api.update.schema.UpdateResponse" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">app.shared.schemas.ResponseSchemas.BaseResponse</span></code></p>
+<p>It’s a response schema that is used to return the number of likes to an update.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.update.schema.UpdateResponse.success">
+<span class="sig-name descname"><span class="pre">success</span></span><em class="property"><span class="w"> </span><span class="pre">:bool</span></em><a class="headerlink" href="#app.api.update.schema.UpdateResponse.success" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.update.schema.UpdateResponse.error">
+<span class="sig-name descname"><span class="pre">error</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.update.schema.UpdateResponse.error" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.update.schema.Update">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.update.schema.</span></span><span class="sig-name descname"><span class="pre">Update</span></span><a class="headerlink" href="#app.api.update.schema.Update" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">app.shared.schemas.orm_schema.ORMCamelModel</span></code></p>
+<p>The Update class is a model that contains the information about a single update</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.update.schema.Update.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="w"> </span><span class="pre">:uuid.UUID</span></em><a class="headerlink" href="#app.api.update.schema.Update.id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.update.schema.Update.content">
+<span class="sig-name descname"><span class="pre">content</span></span><em class="property"><span class="w"> </span><span class="pre">:str</span></em><a class="headerlink" href="#app.api.update.schema.Update.content" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.update.schema.Update.created_at">
+<span class="sig-name descname"><span class="pre">created_at</span></span><em class="property"><span class="w"> </span><span class="pre">:datetime.datetime</span></em><a class="headerlink" href="#app.api.update.schema.Update.created_at" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.update.schema.Update.updated_at">
+<span class="sig-name descname"><span class="pre">updated_at</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[datetime.datetime]</span></em><a class="headerlink" href="#app.api.update.schema.Update.updated_at" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.update.schema.GetStrategyUpdates">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.update.schema.</span></span><span class="sig-name descname"><span class="pre">GetStrategyUpdates</span></span><a class="headerlink" href="#app.api.update.schema.GetStrategyUpdates" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">fastapi_camelcase.CamelModel</span></code></p>
+<p>It’s a request schema for the <cite>/get/strategy/updates</cite> endpoint.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.update.schema.GetStrategyUpdates.strategy_id">
+<span class="sig-name descname"><span class="pre">strategy_id</span></span><em class="property"><span class="w"> </span><span class="pre">:uuid.UUID</span></em><a class="headerlink" href="#app.api.update.schema.GetStrategyUpdates.strategy_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.update.schema.GetPortfolioUpdates">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.update.schema.</span></span><span class="sig-name descname"><span class="pre">GetPortfolioUpdates</span></span><a class="headerlink" href="#app.api.update.schema.GetPortfolioUpdates" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">fastapi_camelcase.CamelModel</span></code></p>
+<p>It’s a request schema for the <cite>/get/portfolio/updates</cite> endpoint.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.update.schema.GetPortfolioUpdates.portfolio_id">
+<span class="sig-name descname"><span class="pre">portfolio_id</span></span><em class="property"><span class="w"> </span><span class="pre">:uuid.UUID</span></em><a class="headerlink" href="#app.api.update.schema.GetPortfolioUpdates.portfolio_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.update.schema.GetUpdatesResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.update.schema.</span></span><span class="sig-name descname"><span class="pre">GetUpdatesResponse</span></span><a class="headerlink" href="#app.api.update.schema.GetUpdatesResponse" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">app.shared.schemas.ResponseSchemas.BaseResponse</span></code></p>
+<p>It’s a response schema that is used to return the number of likes to an update.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.update.schema.GetUpdatesResponse.updates">
+<span class="sig-name descname"><span class="pre">updates</span></span><em class="property"><span class="w"> </span><span class="pre">:List[Update]</span></em><a class="headerlink" href="#app.api.update.schema.GetUpdatesResponse.updates" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.update.schema.ModifyUpdate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.update.schema.</span></span><span class="sig-name descname"><span class="pre">ModifyUpdate</span></span><a class="headerlink" href="#app.api.update.schema.ModifyUpdate" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">fastapi_camelcase.CamelModel</span></code></p>
+<p>It’s a request schema for the <cite>/modify/update</cite> endpoint.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.update.schema.ModifyUpdate.update_id">
+<span class="sig-name descname"><span class="pre">update_id</span></span><em class="property"><span class="w"> </span><span class="pre">:uuid.UUID</span></em><a class="headerlink" href="#app.api.update.schema.ModifyUpdate.update_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.update.schema.ModifyUpdate.update_content">
+<span class="sig-name descname"><span class="pre">update_content</span></span><em class="property"><span class="w"> </span><span class="pre">:str</span></em><a class="headerlink" href="#app.api.update.schema.ModifyUpdate.update_content" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.update.schema.ModifyUpdateResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.update.schema.</span></span><span class="sig-name descname"><span class="pre">ModifyUpdateResponse</span></span><a class="headerlink" href="#app.api.update.schema.ModifyUpdateResponse" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">app.shared.schemas.ResponseSchemas.BaseResponse</span></code></p>
+<p>It’s a response schema that is used to return the number of likes to an update.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.update.schema.ModifyUpdateResponse.success">
+<span class="sig-name descname"><span class="pre">success</span></span><em class="property"><span class="w"> </span><span class="pre">:bool</span></em><a class="headerlink" href="#app.api.update.schema.ModifyUpdateResponse.success" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.update.schema.ModifyUpdateResponse.error">
+<span class="sig-name descname"><span class="pre">error</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.update.schema.ModifyUpdateResponse.error" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Michael Brown.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

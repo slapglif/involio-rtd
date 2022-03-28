@@ -1,0 +1,304 @@
+:py:mod:`app.api.user.schema`
+=============================
+
+.. py:module:: app.api.user.schema
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   app.api.user.schema.UserCreate
+   app.api.user.schema.UserLogin
+   app.api.user.schema.AdminLogin
+   app.api.user.schema.UserResponse
+   app.api.user.schema.GetUser
+   app.api.user.schema.Follower
+   app.api.user.schema.UserBaseResponse
+   app.api.user.schema.UserUpdateName
+   app.api.user.schema.UserUpdateNameResponse
+
+
+
+
+.. py:class:: UserCreate
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   `UserCreate` is a class that is used to validate the data that is being passed to the `/user` route.
+
+   .. py:class:: Config
+
+      .. py:attribute:: schema_extra
+         
+
+         
+
+
+   .. py:attribute:: email
+      :annotation: :pydantic.EmailStr
+
+      
+
+   .. py:attribute:: username
+      :annotation: :str
+
+      
+
+   .. py:attribute:: phone
+      :annotation: :str
+
+      
+
+   .. py:attribute:: name
+      :annotation: :str
+
+      
+
+   .. py:attribute:: birthdate
+      :annotation: :datetime.date
+
+      
+
+   .. py:method:: blank_string(value: str, field)
+
+      The blank_string function returns a string of length n,
+      where n is the input value. If no input is given, it returns an empty string.
+
+      :param value:str: Used to Specify the type of data that will be passed to the function.
+      :param field: Used to Specify the field to be used in the function.
+      :return: A string with a blank space in it.
+
+
+
+   .. py:method:: phone_number(value: str, field)
+
+      The phone_number function takes a string and returns the phone number in
+      standard North American Numbering Plan (NANP) format. The NANP is a standard
+      for the numbering of North American telephone numbers, which includes Canada
+      and the United States. This function will accept input with or without an area
+      code, but it will always return output with an area code.
+
+      :param value:str: Used to Pass the value of the field being validated.
+      :param field: Used to Access the field name of the value that is being validated.
+      :return: A string containing the phone number in e.
+
+
+
+   .. py:method:: username_validator(value: str, field)
+
+      The username_validator function checks to see if the username contains any special characters.
+      If it does, then an exception is raised.
+
+      :param value:str: Used to Specify the value of a field.
+      :param field: Used to Access the field that is being validated.
+      :return: A string.
+
+
+
+
+.. py:class:: UserLogin
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   A class that is used to validate the data that is being passed to the `/login` route.
+
+
+   .. py:class:: Config
+
+      .. py:attribute:: schema_extra
+         
+
+         
+
+
+   .. py:attribute:: phone
+      :annotation: :str
+
+      
+
+
+.. py:class:: AdminLogin
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   This is a class that is used to validate the data that is being passed to the `/admin/login` route.
+
+
+   .. py:class:: Config
+
+      .. py:attribute:: schema_extra
+         
+
+         
+
+
+   .. py:attribute:: email
+      :annotation: :str
+
+      
+
+   .. py:attribute:: code
+      :annotation: :str
+
+      
+
+
+.. py:class:: UserResponse
+
+   Bases: :py:obj:`app.shared.schemas.ResponseSchemas.BaseResponse`
+
+   `UserResponse` is a class that is used to validate the data that is being passed to the `/login` route.
+
+   .. py:attribute:: error
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: response
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: success
+      :annotation: :Optional[bool]
+
+      
+
+   .. py:attribute:: access_token
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: refresh_token
+      :annotation: :Optional[str]
+
+      
+
+
+.. py:class:: GetUser
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   `GetUser` is a class that is used to validate the data that is being passed to the `/user/{userId}` route.
+
+   .. py:class:: Config
+
+      .. py:attribute:: schema_extra
+         
+
+         
+
+
+   .. py:attribute:: user_id
+      :annotation: :uuid.UUID
+
+      
+
+
+.. py:class:: Follower
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   `Follower` is a class that is used to validate the data that is being passed to the `/user/{userId}/followers` route.
+
+
+   .. py:attribute:: id
+      :annotation: :uuid.UUID
+
+      
+
+   .. py:attribute:: owner_id
+      :annotation: :uuid.UUID
+
+      
+
+   .. py:attribute:: created_at
+      :annotation: :datetime.datetime
+
+      
+
+
+.. py:class:: UserBaseResponse
+
+   Bases: :py:obj:`app.shared.schemas.orm_schema.ORMCamelModel`
+
+   `UserBaseResponse` is a class that is used to validate the data that is being passed to the `/user/{userId}` route.
+
+
+   .. py:attribute:: success
+      :annotation: :bool
+
+      
+
+   .. py:attribute:: error
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: response
+      :annotation: :Optional[uuid.UUID]
+
+      
+
+   .. py:attribute:: name
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: username
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: created_at
+      :annotation: :Optional[datetime.datetime]
+
+      
+
+   .. py:attribute:: response
+      :annotation: :Optional[uuid.UUID]
+
+      
+
+   .. py:attribute:: followers
+      :annotation: :Optional[List[Follower]]
+
+      
+
+
+.. py:class:: UserUpdateName
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   This is a class that is used to validate the data that is being passed to the `/user/{userId}/update/name` route.
+
+
+   .. py:attribute:: name
+      :annotation: :str
+
+      
+
+
+.. py:class:: UserUpdateNameResponse
+
+   Bases: :py:obj:`app.shared.schemas.ResponseSchemas.BaseResponse`
+
+   A class that is used to validate the data that is being passed to the `/user/{userId}/update/name` route.
+
+
+   .. py:attribute:: success
+      :annotation: :bool
+
+      
+
+   .. py:attribute:: error
+      :annotation: :Optional[str]
+
+      
+
+

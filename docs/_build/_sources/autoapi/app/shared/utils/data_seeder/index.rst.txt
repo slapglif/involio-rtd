@@ -1,0 +1,158 @@
+:py:mod:`app.shared.utils.data_seeder`
+======================================
+
+.. py:module:: app.shared.utils.data_seeder
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   app.shared.utils.data_seeder.BaseUsername
+   app.shared.utils.data_seeder.CreateData
+   app.shared.utils.data_seeder.IterationData
+   app.shared.utils.data_seeder.UserGenerator
+   app.shared.utils.data_seeder.MainMenu
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   app.shared.utils.data_seeder.seed_asset_types
+   app.shared.utils.data_seeder.remove_seeded_users
+   app.shared.utils.data_seeder.update_seeded_users
+   app.shared.utils.data_seeder.update_comments
+   app.shared.utils.data_seeder.menu
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   app.shared.utils.data_seeder.fake
+
+
+.. py:data:: fake
+   
+
+   
+
+.. py:function:: seed_asset_types()
+
+
+.. py:class:: BaseUsername(base_username: str)
+
+   .. py:method:: random_number(cls, length=8)
+      :classmethod:
+
+
+   .. py:method:: random_float(cls, digits: int, decimals: int)
+      :classmethod:
+
+
+   .. py:method:: base_user_seeder(self, username: str = None)
+
+
+
+.. py:class:: CreateData(username)
+
+   .. py:method:: create_interests(self)
+
+
+   .. py:method:: create_files(self)
+
+
+   .. py:method:: create_profile(self)
+
+
+   .. py:method:: create_portfolios(self)
+
+
+   .. py:method:: create_strategies(self)
+
+
+   .. py:method:: create_updates(self)
+
+
+   .. py:method:: create_posts(self)
+
+
+
+.. py:class:: IterationData(user_id, target_user_id, target_user_username, skip_portfolio=False, skip_strategy=False)
+
+   .. py:method:: create_follows(self)
+
+
+   .. py:method:: create_reviews(self)
+
+
+   .. py:method:: create_likes(self)
+
+
+   .. py:method:: create_comments(self)
+
+
+   .. py:method:: create_reactions(self)
+
+
+
+.. py:class:: UserGenerator(base_username: str, number_of_users=3000, print_stats=False, seed_random_user=True)
+
+   .. py:method:: generate_users_use_threaded(self)
+
+
+   .. py:method:: generate_users_use_loop(self)
+
+
+   .. py:method:: entry_point(self, iteration)
+
+
+   .. py:method:: get_user_stats(self)
+
+
+   .. py:method:: generate_likes_and_comments_use_thread(self)
+
+
+   .. py:method:: generate_likes_and_comments_use_loop(cls)
+      :classmethod:
+
+
+
+.. py:function:: remove_seeded_users(username)
+
+
+.. py:function:: update_seeded_users(base_username: str, target_model, update_field: str = None, update_value=None, runner_func=None, mass_update: bool = False)
+
+
+.. py:function:: update_comments()
+
+
+.. py:class:: MainMenu(**kwargs)
+
+   .. py:method:: seed_base(self)
+
+      creates a base user with a random number username
+
+
+   .. py:method:: build_generator(self, comments=False)
+
+
+   .. py:method:: menu_functions(self, run=False)
+
+
+   .. py:method:: run_menu_function(self)
+
+
+
+.. py:function:: menu()
+
+

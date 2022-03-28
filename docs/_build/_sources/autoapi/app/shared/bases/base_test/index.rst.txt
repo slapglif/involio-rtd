@@ -1,0 +1,73 @@
+:py:mod:`app.shared.bases.base_test`
+====================================
+
+.. py:module:: app.shared.bases.base_test
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   app.shared.bases.base_test.mock_post
+   app.shared.bases.base_test.mock_paged_post_data
+   app.shared.bases.base_test.readout
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   app.shared.bases.base_test.user_data
+   app.shared.bases.base_test.test_user
+   app.shared.bases.base_test.user_id
+   app.shared.bases.base_test.access_token
+   app.shared.bases.base_test.auth_header
+   app.shared.bases.base_test.client
+
+
+.. py:data:: user_data
+   
+
+   
+
+.. py:data:: test_user
+   
+
+   
+
+.. py:data:: user_id
+   
+
+   
+
+.. py:data:: access_token
+   
+
+   
+
+.. py:data:: auth_header
+   
+
+   
+
+.. py:data:: client
+   
+
+   
+
+.. py:function:: mock_post(url, data)
+
+
+.. py:function:: mock_paged_post_data(context, page, size, order)
+
+
+.. py:function:: readout(response)
+
+

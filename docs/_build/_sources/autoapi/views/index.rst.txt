@@ -1,0 +1,36 @@
+:py:mod:`views`
+===============
+
+.. py:module:: views
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   views.get_all_topic_types
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   views.router
+
+
+.. py:data:: router
+   
+
+   
+
+.. py:function:: get_all_topic_types()
+   :async:
+
+

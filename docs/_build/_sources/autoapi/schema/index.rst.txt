@@ -1,0 +1,128 @@
+:py:mod:`schema`
+================
+
+.. py:module:: schema
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   schema.TopicType
+   schema.GetAllTopicTypesResponse
+   schema.CreateTopicType
+   schema.CreateTopicTypeResponse
+   schema.RemoveTopicTypeResponse
+   schema.RemoveTopicType
+
+
+
+
+.. py:class:: TopicType
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   .. py:class:: Config
+
+      .. py:attribute:: schema_extra
+         
+
+         
+
+
+   .. py:attribute:: id
+      :annotation: :str
+
+      
+
+   .. py:attribute:: name
+      :annotation: :str
+
+      
+
+
+.. py:class:: GetAllTopicTypesResponse
+
+   Bases: :py:obj:`app.shared.schemas.ResponseSchemas.BaseResponse`
+
+   .. py:attribute:: topic_types
+      :annotation: :List[TopicType]
+
+      
+
+
+.. py:class:: CreateTopicType
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   .. py:class:: Config
+
+      .. py:attribute:: schema_extra
+         
+
+         
+
+
+   .. py:attribute:: name
+      :annotation: :str
+
+      
+
+   .. py:attribute:: id
+      :annotation: :str
+
+      
+
+
+.. py:class:: CreateTopicTypeResponse
+
+   Bases: :py:obj:`app.shared.schemas.ResponseSchemas.BaseResponse`
+
+   .. py:attribute:: success
+      :annotation: :bool
+
+      
+
+   .. py:attribute:: error
+      :annotation: :Optional[str]
+
+      
+
+
+.. py:class:: RemoveTopicTypeResponse
+
+   Bases: :py:obj:`pydantic.BaseModel`
+
+   .. py:attribute:: success
+      :annotation: :bool
+
+      
+
+   .. py:attribute:: error
+      :annotation: :Optional[str]
+
+      
+
+
+.. py:class:: RemoveTopicType
+
+   Bases: :py:obj:`pydantic.BaseModel`
+
+   .. py:class:: Config
+
+      .. py:attribute:: schema_extra
+         
+
+         
+
+
+   .. py:attribute:: id
+      :annotation: :str
+
+      
+
+

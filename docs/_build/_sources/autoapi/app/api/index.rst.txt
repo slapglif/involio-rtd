@@ -1,0 +1,19 @@
+:py:mod:`app.api`
+=================
+
+.. py:module:: app.api
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   auth/index.rst
+   follow/index.rst
+   profile/index.rst
+   update/index.rst
+   user/index.rst
+
+

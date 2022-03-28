@@ -1,0 +1,18 @@
+:py:mod:`app.api.auth.tests`
+============================
+
+.. py:module:: app.api.auth.tests
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   test_notifications/index.rst
+   test_overwrite_default_user/index.rst
+   test_refresh_claim/index.rst
+   test_users/index.rst
+
+

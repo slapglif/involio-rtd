@@ -1,0 +1,329 @@
+:py:mod:`json_encoders`
+=======================
+
+.. py:module:: json_encoders
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   json_encoders.ModelEncoder
+   json_encoders._JSONEncoder
+   json_encoders.ModelDecoder
+   json_encoders._JSONDecoder
+   json_encoders.CustomJSONEncoder
+   json_encoders.CustomJSONDecoder
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   json_encoders.datetime_parser
+   json_encoders.decode_model
+
+
+
+.. py:function:: datetime_parser(json_dict)
+
+   The datetime_parser function attempts to parse any datetime strings in the JSON object.
+   If a datetime string is successfully parsed, it is replaced with a Python datetime object.
+
+   :param json_dict: Used to Pass the json_dict to be parsed.
+   :return: A dictionary with the datetime objects.
+
+
+.. py:class:: ModelEncoder(*, skipkeys=False, ensure_ascii=True, check_circular=True, allow_nan=True, sort_keys=False, indent=None, separators=None, default=None)
+
+   Bases: :py:obj:`json.JSONEncoder`
+
+   Extensible JSON <http://json.org> encoder for Python data structures.
+
+   Supports the following objects and types by default:
+
+   +-------------------+---------------+
+   | Python            | JSON          |
+   +===================+===============+
+   | dict              | object        |
+   +-------------------+---------------+
+   | list, tuple       | array         |
+   +-------------------+---------------+
+   | str               | string        |
+   +-------------------+---------------+
+   | int, float        | number        |
+   +-------------------+---------------+
+   | True              | true          |
+   +-------------------+---------------+
+   | False             | false         |
+   +-------------------+---------------+
+   | None              | null          |
+   +-------------------+---------------+
+
+   To extend this to recognize other objects, subclass and implement a
+   ``.default()`` method with another method that returns a serializable
+   object for ``o`` if possible, otherwise it should call the superclass
+   implementation (to raise ``TypeError``).
+
+
+   .. py:method:: default(self, obj)
+
+      The default function is used to serialize objects that are not natively
+      serializable by the JSON encoder. This function will be called on any object
+      that is passed to the json.dumps() method.
+
+      :param self: Used to Access variables that belongs to the class.
+      :param obj: Used to Pass in the object to be serialized.
+      :return: None.
+
+
+
+
+
+.. py:class:: _JSONEncoder(*, skipkeys=False, ensure_ascii=True, check_circular=True, allow_nan=True, sort_keys=False, indent=None, separators=None, default=None)
+
+   Bases: :py:obj:`json.JSONEncoder`
+
+   Extensible JSON <http://json.org> encoder for Python data structures.
+
+   Supports the following objects and types by default:
+
+   +-------------------+---------------+
+   | Python            | JSON          |
+   +===================+===============+
+   | dict              | object        |
+   +-------------------+---------------+
+   | list, tuple       | array         |
+   +-------------------+---------------+
+   | str               | string        |
+   +-------------------+---------------+
+   | int, float        | number        |
+   +-------------------+---------------+
+   | True              | true          |
+   +-------------------+---------------+
+   | False             | false         |
+   +-------------------+---------------+
+   | None              | null          |
+   +-------------------+---------------+
+
+   To extend this to recognize other objects, subclass and implement a
+   ``.default()`` method with another method that returns a serializable
+   object for ``o`` if possible, otherwise it should call the superclass
+   implementation (to raise ``TypeError``).
+
+
+   .. py:method:: default(self, obj)
+
+      The default function is used to serialize objects that are not natively
+      serializable by the JSON encoder. This function will be called on objects
+      that are not serializable.
+
+      :param self: Used to Access the attributes and methods of the class.
+      :param obj: Used to Pass in the object that is being serialized.
+      :return: The object itself.
+
+
+
+
+
+.. py:function:: decode_model(cache_data)
+
+   The decode_model function takes a dictionary of the form returned by the
+   encode_model function and converts it back to a list of dictionaries. This is
+   useful for debugging, but also necessary when calling functions that expect an
+   encoded model.
+
+   :param cache_data: Used to Retrieve the data from the cache.
+   :return: A list of dictionaries.
+
+
+.. py:class:: ModelDecoder(*, object_hook=None, parse_float=None, parse_int=None, parse_constant=None, strict=True, object_pairs_hook=None)
+
+   Bases: :py:obj:`json.JSONDecoder`
+
+   Simple JSON <http://json.org> decoder
+
+   Performs the following translations in decoding by default:
+
+   +---------------+-------------------+
+   | JSON          | Python            |
+   +===============+===================+
+   | object        | dict              |
+   +---------------+-------------------+
+   | array         | list              |
+   +---------------+-------------------+
+   | string        | str               |
+   +---------------+-------------------+
+   | number (int)  | int               |
+   +---------------+-------------------+
+   | number (real) | float             |
+   +---------------+-------------------+
+   | true          | True              |
+   +---------------+-------------------+
+   | false         | False             |
+   +---------------+-------------------+
+   | null          | None              |
+   +---------------+-------------------+
+
+   It also understands ``NaN``, ``Infinity``, and ``-Infinity`` as
+   their corresponding ``float`` values, which is outside the JSON spec.
+
+
+   .. py:method:: default(self, obj)
+
+      The default function is used to serialize objects that do not have a
+      serialize method. It serializes the object using json.dumps.
+
+      :param self: Used to Reference the class itself.
+      :param obj: Used to Pass in the object that is being encoded.
+      :return: The object itself.
+
+
+
+
+
+.. py:class:: _JSONDecoder(*args, **kwargs)
+
+   Bases: :py:obj:`json.JSONDecoder`
+
+   Simple JSON <http://json.org> decoder
+
+   Performs the following translations in decoding by default:
+
+   +---------------+-------------------+
+   | JSON          | Python            |
+   +===============+===================+
+   | object        | dict              |
+   +---------------+-------------------+
+   | array         | list              |
+   +---------------+-------------------+
+   | string        | str               |
+   +---------------+-------------------+
+   | number (int)  | int               |
+   +---------------+-------------------+
+   | number (real) | float             |
+   +---------------+-------------------+
+   | true          | True              |
+   +---------------+-------------------+
+   | false         | False             |
+   +---------------+-------------------+
+   | null          | None              |
+   +---------------+-------------------+
+
+   It also understands ``NaN``, ``Infinity``, and ``-Infinity`` as
+   their corresponding ``float`` values, which is outside the JSON spec.
+
+
+   .. py:method:: object_hook(self, obj)
+
+      The object_hook function is used to convert the JSON object into a Python dictionary.
+      The datetime and date objects are converted from ISO format strings to Python datetime objects.
+
+      :param self: Used to Reference the class itself.
+      :param obj: Used to Pass in the dictionary that is being decoded.
+      :return: A dictionary of the key value pairs in the object.
+
+
+
+
+
+.. py:class:: CustomJSONEncoder(*, skipkeys=False, ensure_ascii=True, check_circular=True, allow_nan=True, sort_keys=False, indent=None, separators=None, default=None)
+
+   Bases: :py:obj:`json.JSONEncoder`
+
+   Extensible JSON <http://json.org> encoder for Python data structures.
+
+   Supports the following objects and types by default:
+
+   +-------------------+---------------+
+   | Python            | JSON          |
+   +===================+===============+
+   | dict              | object        |
+   +-------------------+---------------+
+   | list, tuple       | array         |
+   +-------------------+---------------+
+   | str               | string        |
+   +-------------------+---------------+
+   | int, float        | number        |
+   +-------------------+---------------+
+   | True              | true          |
+   +-------------------+---------------+
+   | False             | false         |
+   +-------------------+---------------+
+   | None              | null          |
+   +-------------------+---------------+
+
+   To extend this to recognize other objects, subclass and implement a
+   ``.default()`` method with another method that returns a serializable
+   object for ``o`` if possible, otherwise it should call the superclass
+   implementation (to raise ``TypeError``).
+
+
+   .. py:method:: default(self, obj)
+
+      The default function is used to serialize objects that are not natively
+      serializable by the JSON encoder. This function will be called on objects
+      that aren't natively serializable by the encoder. The default function will
+      be passed the object to convert and should return a serialized representation
+      of that object.
+
+      :param self: Used to Access variables that belongs to the class.
+      :param obj: Used to Pass in the object to be serialized.
+      :return: The default value for the object type.
+
+
+
+
+
+.. py:class:: CustomJSONDecoder(*args, **kwargs)
+
+   Bases: :py:obj:`json.JSONDecoder`
+
+   Simple JSON <http://json.org> decoder
+
+   Performs the following translations in decoding by default:
+
+   +---------------+-------------------+
+   | JSON          | Python            |
+   +===============+===================+
+   | object        | dict              |
+   +---------------+-------------------+
+   | array         | list              |
+   +---------------+-------------------+
+   | string        | str               |
+   +---------------+-------------------+
+   | number (int)  | int               |
+   +---------------+-------------------+
+   | number (real) | float             |
+   +---------------+-------------------+
+   | true          | True              |
+   +---------------+-------------------+
+   | false         | False             |
+   +---------------+-------------------+
+   | null          | None              |
+   +---------------+-------------------+
+
+   It also understands ``NaN``, ``Infinity``, and ``-Infinity`` as
+   their corresponding ``float`` values, which is outside the JSON spec.
+
+
+   .. py:method:: object_hook(cls, source)
+      :classmethod:
+
+      The object_hook function is used to convert the JSON string into a Python object.
+      The datetime module is used to parse the date strings and convert them into a format that can be manipulated by Python.
+
+      :param cls: Used to Pass the class of the object being created.
+      :param source: Used to Pass the json object to be parsed.
+      :return: The source dictionary.
+
+
+
+
+

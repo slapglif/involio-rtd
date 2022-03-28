@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>app.api.follow.schema &mdash; Involio Backend 0.0.3 documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../index.html" class="icon icon-home"> Involio Backend
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Involio Backend</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">app.api.follow.schema</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/autoapi/app/api/follow/schema/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-app.api.follow.schema">
+<span id="app-api-follow-schema"></span><h1><a class="reference internal" href="#module-app.api.follow.schema" title="app.api.follow.schema"><code class="xref py py-mod docutils literal notranslate"><span class="pre">app.api.follow.schema</span></code></a><a class="headerlink" href="#module-app.api.follow.schema" title="Permalink to this headline"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.follow.schema.GetFollowers" title="app.api.follow.schema.GetFollowers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetFollowers</span></code></a></p></td>
+<td><p>This class is used to get the followers of a user</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.follow.schema.GetFollowing" title="app.api.follow.schema.GetFollowing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetFollowing</span></code></a></p></td>
+<td><p>Getting the following of a user.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.follow.schema.GetFollowersResponse" title="app.api.follow.schema.GetFollowersResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetFollowersResponse</span></code></a></p></td>
+<td><p>It tells the API what to expect when it gets a response from the server.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.follow.schema.GetFollowingResponse" title="app.api.follow.schema.GetFollowingResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetFollowingResponse</span></code></a></p></td>
+<td><p>It tells the API what to expect when it gets back a response from the server.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.follow.schema.CreateFollower" title="app.api.follow.schema.CreateFollower"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateFollower</span></code></a></p></td>
+<td><p>CreateFollower is a class that</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.follow.schema.RemoveFollow" title="app.api.follow.schema.RemoveFollow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RemoveFollow</span></code></a></p></td>
+<td><p>The RemoveFollow class is a model that contains information about a remove follow request.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.follow.schema.CreateFollowResponse" title="app.api.follow.schema.CreateFollowResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateFollowResponse</span></code></a></p></td>
+<td><p>This class creates a response to a follow request.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.follow.schema.DeleteFollowResponse" title="app.api.follow.schema.DeleteFollowResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DeleteFollowResponse</span></code></a></p></td>
+<td><p>DeleteFollowResponse tells the API what to expect when it receives data for this resource.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.follow.schema.GetFollowers">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.follow.schema.</span></span><span class="sig-name descname"><span class="pre">GetFollowers</span></span><a class="headerlink" href="#app.api.follow.schema.GetFollowers" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">fastapi_camelcase.CamelModel</span></code></p>
+<p>This class is used to get the followers of a user</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.follow.schema.GetFollowers.Config">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#app.api.follow.schema.GetFollowers.Config" title="Permalink to this definition"></a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.follow.schema.GetFollowers.Config.schema_extra">
+<span class="sig-name descname"><span class="pre">schema_extra</span></span><a class="headerlink" href="#app.api.follow.schema.GetFollowers.Config.schema_extra" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.follow.schema.GetFollowers.object_id">
+<span class="sig-name descname"><span class="pre">object_id</span></span><em class="property"><span class="w"> </span><span class="pre">:uuid.UUID</span></em><a class="headerlink" href="#app.api.follow.schema.GetFollowers.object_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.follow.schema.GetFollowing">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.follow.schema.</span></span><span class="sig-name descname"><span class="pre">GetFollowing</span></span><a class="headerlink" href="#app.api.follow.schema.GetFollowing" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">fastapi_camelcase.CamelModel</span></code></p>
+<p>Getting the following of a user.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.follow.schema.GetFollowing.Config">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#app.api.follow.schema.GetFollowing.Config" title="Permalink to this definition"></a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.follow.schema.GetFollowing.Config.schema_extra">
+<span class="sig-name descname"><span class="pre">schema_extra</span></span><a class="headerlink" href="#app.api.follow.schema.GetFollowing.Config.schema_extra" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.follow.schema.GetFollowing.user_id">
+<span class="sig-name descname"><span class="pre">user_id</span></span><em class="property"><span class="w"> </span><span class="pre">:uuid.UUID</span></em><a class="headerlink" href="#app.api.follow.schema.GetFollowing.user_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.follow.schema.GetFollowersResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.follow.schema.</span></span><span class="sig-name descname"><span class="pre">GetFollowersResponse</span></span><a class="headerlink" href="#app.api.follow.schema.GetFollowersResponse" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">app.shared.schemas.ResponseSchemas.BaseResponse</span></code></p>
+<p>It tells the API what to expect when it gets a response from the server.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.follow.schema.GetFollowersResponse.followers">
+<span class="sig-name descname"><span class="pre">followers</span></span><em class="property"><span class="w"> </span><span class="pre">:List[uuid.UUID]</span></em><a class="headerlink" href="#app.api.follow.schema.GetFollowersResponse.followers" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.follow.schema.GetFollowersResponse.number_of_followers">
+<span class="sig-name descname"><span class="pre">number_of_followers</span></span><em class="property"><span class="w"> </span><span class="pre">:int</span></em><a class="headerlink" href="#app.api.follow.schema.GetFollowersResponse.number_of_followers" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.follow.schema.GetFollowingResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.follow.schema.</span></span><span class="sig-name descname"><span class="pre">GetFollowingResponse</span></span><a class="headerlink" href="#app.api.follow.schema.GetFollowingResponse" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">app.shared.schemas.ResponseSchemas.BaseResponse</span></code></p>
+<p>It tells the API what to expect when it gets back a response from the server.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.follow.schema.GetFollowingResponse.following">
+<span class="sig-name descname"><span class="pre">following</span></span><em class="property"><span class="w"> </span><span class="pre">:List[uuid.UUID]</span></em><a class="headerlink" href="#app.api.follow.schema.GetFollowingResponse.following" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.follow.schema.GetFollowingResponse.total_following">
+<span class="sig-name descname"><span class="pre">total_following</span></span><em class="property"><span class="w"> </span><span class="pre">:int</span></em><a class="headerlink" href="#app.api.follow.schema.GetFollowingResponse.total_following" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.follow.schema.CreateFollower">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.follow.schema.</span></span><span class="sig-name descname"><span class="pre">CreateFollower</span></span><a class="headerlink" href="#app.api.follow.schema.CreateFollower" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">fastapi_camelcase.CamelModel</span></code></p>
+<p>CreateFollower is a class that
+represents a request to create a new follower</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.follow.schema.CreateFollower.object_id">
+<span class="sig-name descname"><span class="pre">object_id</span></span><em class="property"><span class="w"> </span><span class="pre">:uuid.UUID</span></em><a class="headerlink" href="#app.api.follow.schema.CreateFollower.object_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.follow.schema.RemoveFollow">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.follow.schema.</span></span><span class="sig-name descname"><span class="pre">RemoveFollow</span></span><a class="headerlink" href="#app.api.follow.schema.RemoveFollow" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">fastapi_camelcase.CamelModel</span></code></p>
+<p>The RemoveFollow class is a model that contains information about a remove follow request.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.follow.schema.RemoveFollow.object_id">
+<span class="sig-name descname"><span class="pre">object_id</span></span><em class="property"><span class="w"> </span><span class="pre">:uuid.UUID</span></em><a class="headerlink" href="#app.api.follow.schema.RemoveFollow.object_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.follow.schema.CreateFollowResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.follow.schema.</span></span><span class="sig-name descname"><span class="pre">CreateFollowResponse</span></span><a class="headerlink" href="#app.api.follow.schema.CreateFollowResponse" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">app.shared.schemas.ResponseSchemas.BaseResponse</span></code></p>
+<p>This class creates a response to a follow request.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.follow.schema.CreateFollowResponse.success">
+<span class="sig-name descname"><span class="pre">success</span></span><em class="property"><span class="w"> </span><span class="pre">:bool</span></em><a class="headerlink" href="#app.api.follow.schema.CreateFollowResponse.success" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.follow.schema.CreateFollowResponse.error">
+<span class="sig-name descname"><span class="pre">error</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.follow.schema.CreateFollowResponse.error" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.follow.schema.CreateFollowResponse.response">
+<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[uuid.UUID]</span></em><a class="headerlink" href="#app.api.follow.schema.CreateFollowResponse.response" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.follow.schema.DeleteFollowResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.follow.schema.</span></span><span class="sig-name descname"><span class="pre">DeleteFollowResponse</span></span><a class="headerlink" href="#app.api.follow.schema.DeleteFollowResponse" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">app.shared.schemas.ResponseSchemas.BaseResponse</span></code></p>
+<p>DeleteFollowResponse tells the API what to expect when it receives data for this resource.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.follow.schema.DeleteFollowResponse.success">
+<span class="sig-name descname"><span class="pre">success</span></span><em class="property"><span class="w"> </span><span class="pre">:bool</span></em><a class="headerlink" href="#app.api.follow.schema.DeleteFollowResponse.success" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.follow.schema.DeleteFollowResponse.error">
+<span class="sig-name descname"><span class="pre">error</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.follow.schema.DeleteFollowResponse.error" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Michael Brown.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

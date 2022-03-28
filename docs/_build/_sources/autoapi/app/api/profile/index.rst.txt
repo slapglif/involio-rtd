@@ -1,0 +1,17 @@
+:py:mod:`app.api.profile`
+=========================
+
+.. py:module:: app.api.profile
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   models/index.rst
+   schema/index.rst
+   views/index.rst
+
+

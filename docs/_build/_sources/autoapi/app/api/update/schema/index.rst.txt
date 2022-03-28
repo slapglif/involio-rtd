@@ -1,0 +1,222 @@
+:py:mod:`app.api.update.schema`
+===============================
+
+.. py:module:: app.api.update.schema
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   app.api.update.schema.UpdateLikeCount
+   app.api.update.schema.UpdateLikeCountResponse
+   app.api.update.schema.CreateStrategyUpdate
+   app.api.update.schema.CreatePortfolioUpdate
+   app.api.update.schema.UpdateResponse
+   app.api.update.schema.Update
+   app.api.update.schema.GetStrategyUpdates
+   app.api.update.schema.GetPortfolioUpdates
+   app.api.update.schema.GetUpdatesResponse
+   app.api.update.schema.ModifyUpdate
+   app.api.update.schema.ModifyUpdateResponse
+
+
+
+
+.. py:class:: UpdateLikeCount
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   It's a request schema for the `/update/like` endpoint.
+
+
+   .. py:attribute:: update_id
+      :annotation: :uuid.UUID
+
+      
+
+
+.. py:class:: UpdateLikeCountResponse
+
+   Bases: :py:obj:`app.shared.schemas.ResponseSchemas.BaseResponse`
+
+   It's a response schema that is used to return the number of likes to an update.
+
+
+   .. py:attribute:: like_count
+      :annotation: :int
+
+      
+
+
+.. py:class:: CreateStrategyUpdate
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   It's a request schema that is used to create a new strategy update.
+
+
+   .. py:attribute:: update_title
+      :annotation: :str
+
+      
+
+   .. py:attribute:: update_content
+      :annotation: :str
+
+      
+
+   .. py:attribute:: strategy_id
+      :annotation: :uuid.UUID
+
+      
+
+
+.. py:class:: CreatePortfolioUpdate
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   It's a request schema for the `/create/portfolio/update` endpoint.
+
+
+   .. py:attribute:: update_title
+      :annotation: :str
+
+      
+
+   .. py:attribute:: update_content
+      :annotation: :str
+
+      
+
+   .. py:attribute:: portfolio_id
+      :annotation: :uuid.UUID
+
+      
+
+
+.. py:class:: UpdateResponse
+
+   Bases: :py:obj:`app.shared.schemas.ResponseSchemas.BaseResponse`
+
+   It's a response schema that is used to return the number of likes to an update.
+
+
+   .. py:attribute:: success
+      :annotation: :bool
+
+      
+
+   .. py:attribute:: error
+      :annotation: :Optional[str]
+
+      
+
+
+.. py:class:: Update
+
+   Bases: :py:obj:`app.shared.schemas.orm_schema.ORMCamelModel`
+
+   The Update class is a model that contains the information about a single update
+
+
+   .. py:attribute:: id
+      :annotation: :uuid.UUID
+
+      
+
+   .. py:attribute:: content
+      :annotation: :str
+
+      
+
+   .. py:attribute:: created_at
+      :annotation: :datetime.datetime
+
+      
+
+   .. py:attribute:: updated_at
+      :annotation: :Optional[datetime.datetime]
+
+      
+
+
+.. py:class:: GetStrategyUpdates
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   It's a request schema for the `/get/strategy/updates` endpoint.
+
+
+   .. py:attribute:: strategy_id
+      :annotation: :uuid.UUID
+
+      
+
+
+.. py:class:: GetPortfolioUpdates
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   It's a request schema for the `/get/portfolio/updates` endpoint.
+
+
+   .. py:attribute:: portfolio_id
+      :annotation: :uuid.UUID
+
+      
+
+
+.. py:class:: GetUpdatesResponse
+
+   Bases: :py:obj:`app.shared.schemas.ResponseSchemas.BaseResponse`
+
+   It's a response schema that is used to return the number of likes to an update.
+
+
+   .. py:attribute:: updates
+      :annotation: :List[Update]
+
+      
+
+
+.. py:class:: ModifyUpdate
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   It's a request schema for the `/modify/update` endpoint.
+
+
+   .. py:attribute:: update_id
+      :annotation: :uuid.UUID
+
+      
+
+   .. py:attribute:: update_content
+      :annotation: :str
+
+      
+
+
+.. py:class:: ModifyUpdateResponse
+
+   Bases: :py:obj:`app.shared.schemas.ResponseSchemas.BaseResponse`
+
+   It's a response schema that is used to return the number of likes to an update.
+
+
+   .. py:attribute:: success
+      :annotation: :bool
+
+      
+
+   .. py:attribute:: error
+      :annotation: :Optional[str]
+
+      
+
+

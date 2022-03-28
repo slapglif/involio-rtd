@@ -1,0 +1,164 @@
+:py:mod:`app.api.follow.schema`
+===============================
+
+.. py:module:: app.api.follow.schema
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   app.api.follow.schema.GetFollowers
+   app.api.follow.schema.GetFollowing
+   app.api.follow.schema.GetFollowersResponse
+   app.api.follow.schema.GetFollowingResponse
+   app.api.follow.schema.CreateFollower
+   app.api.follow.schema.RemoveFollow
+   app.api.follow.schema.CreateFollowResponse
+   app.api.follow.schema.DeleteFollowResponse
+
+
+
+
+.. py:class:: GetFollowers
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   This class is used to get the followers of a user
+
+   .. py:class:: Config
+
+      .. py:attribute:: schema_extra
+         
+
+         
+
+
+   .. py:attribute:: object_id
+      :annotation: :uuid.UUID
+
+      
+
+
+.. py:class:: GetFollowing
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   Getting the following of a user.
+
+   .. py:class:: Config
+
+      .. py:attribute:: schema_extra
+         
+
+         
+
+
+   .. py:attribute:: user_id
+      :annotation: :uuid.UUID
+
+      
+
+
+.. py:class:: GetFollowersResponse
+
+   Bases: :py:obj:`app.shared.schemas.ResponseSchemas.BaseResponse`
+
+   It tells the API what to expect when it gets a response from the server.
+
+   .. py:attribute:: followers
+      :annotation: :List[uuid.UUID]
+
+      
+
+   .. py:attribute:: number_of_followers
+      :annotation: :int
+
+      
+
+
+.. py:class:: GetFollowingResponse
+
+   Bases: :py:obj:`app.shared.schemas.ResponseSchemas.BaseResponse`
+
+   It tells the API what to expect when it gets back a response from the server.
+
+   .. py:attribute:: following
+      :annotation: :List[uuid.UUID]
+
+      
+
+   .. py:attribute:: total_following
+      :annotation: :int
+
+      
+
+
+.. py:class:: CreateFollower
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   CreateFollower is a class that
+   represents a request to create a new follower
+
+   .. py:attribute:: object_id
+      :annotation: :uuid.UUID
+
+      
+
+
+.. py:class:: RemoveFollow
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   The RemoveFollow class is a model that contains information about a remove follow request.
+
+   .. py:attribute:: object_id
+      :annotation: :uuid.UUID
+
+      
+
+
+.. py:class:: CreateFollowResponse
+
+   Bases: :py:obj:`app.shared.schemas.ResponseSchemas.BaseResponse`
+
+   This class creates a response to a follow request.
+
+   .. py:attribute:: success
+      :annotation: :bool
+
+      
+
+   .. py:attribute:: error
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: response
+      :annotation: :Optional[uuid.UUID]
+
+      
+
+
+.. py:class:: DeleteFollowResponse
+
+   Bases: :py:obj:`app.shared.schemas.ResponseSchemas.BaseResponse`
+
+   DeleteFollowResponse tells the API what to expect when it receives data for this resource.
+
+   .. py:attribute:: success
+      :annotation: :bool
+
+      
+
+   .. py:attribute:: error
+      :annotation: :Optional[str]
+
+      
+
+

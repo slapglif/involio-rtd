@@ -1,0 +1,64 @@
+:py:mod:`RequestSchemas`
+========================
+
+.. py:module:: RequestSchemas
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   RequestSchemas.BaseRequest
+   RequestSchemas.GetObjects
+   RequestSchemas.CloseObject
+
+
+
+
+.. py:class:: BaseRequest
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   Request factory for our abstract input class
+
+   .. py:class:: Config
+
+      Base Config Object with example
+
+      .. py:attribute:: schema_extra
+         
+
+         
+
+
+   .. py:attribute:: primary_key
+      :annotation: :uuid.UUID
+
+      
+
+   .. py:attribute:: optional_key
+      :annotation: :Optional[uuid.UUID]
+
+      
+
+
+.. py:class:: GetObjects
+
+   Bases: :py:obj:`BaseRequest`
+
+   GetObjects represents a generic getter for a list of objects
+   to be fetched from the database with a single common key.
+
+
+.. py:class:: CloseObject
+
+   Bases: :py:obj:`BaseRequest`
+
+   CloseObject exists as an abstract input schema to mark
+   and object inactive in the database.
+
+

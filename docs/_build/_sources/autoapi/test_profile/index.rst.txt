@@ -1,0 +1,42 @@
+:py:mod:`test_profile`
+======================
+
+.. py:module:: test_profile
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   test_profile.test_set_bio
+   test_profile.test_set_location
+   test_profile.test_set_investment
+   test_profile.test_set_books
+   test_profile.test_set_podcasts
+   test_profile.test_set_avatar
+
+
+
+.. py:function:: test_set_bio()
+
+
+.. py:function:: test_set_location()
+
+
+.. py:function:: test_set_investment()
+
+
+.. py:function:: test_set_books()
+
+
+.. py:function:: test_set_podcasts()
+
+
+.. py:function:: test_set_avatar()
+
+

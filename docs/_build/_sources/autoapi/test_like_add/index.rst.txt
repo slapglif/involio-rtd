@@ -1,0 +1,26 @@
+:py:mod:`test_like_add`
+=======================
+
+.. py:module:: test_like_add
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   test_like_add.test_filter_method
+   test_like_add.test_remove_like
+
+
+
+.. py:function:: test_filter_method()
+
+
+.. py:function:: test_remove_like()
+
+

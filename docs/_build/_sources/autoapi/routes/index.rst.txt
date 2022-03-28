@@ -1,0 +1,31 @@
+:py:mod:`routes`
+================
+
+.. py:module:: routes
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   routes.use_route_names_as_operation_ids
+   routes.add_routes
+
+
+
+.. py:function:: use_route_names_as_operation_ids(app: fastapi.FastAPI) -> None
+
+   Method to allow swagger to use function names for schema generation
+
+
+.. py:function:: add_routes() -> fastapi.FastAPI
+
+   Generic Method to find and activate all http routes
+   :return:
+
+

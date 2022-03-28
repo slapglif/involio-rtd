@@ -1,0 +1,42 @@
+:py:mod:`cache`
+===============
+
+.. py:module:: cache
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cache.RedisCache
+
+
+
+
+.. py:class:: RedisCache
+
+   .. py:method:: check_cache(self, key)
+      :async:
+
+
+   .. py:method:: put_in_cache(self, key, value, expire_time=None)
+      :async:
+
+
+   .. py:method:: get_posts_from_cache(self, cache_key)
+      :async:
+
+
+   .. py:method:: get_trending_from_cache(self, content_filter)
+      :async:
+
+
+   .. py:method:: cache_singe_post(self, post: dict, post_id: str)
+      :async:
+
+
+

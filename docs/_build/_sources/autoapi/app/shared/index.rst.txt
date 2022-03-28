@@ -1,0 +1,19 @@
+:py:mod:`app.shared`
+====================
+
+.. py:module:: app.shared
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   auth/index.rst
+   bases/index.rst
+   exception/index.rst
+   helper/index.rst
+   utils/index.rst
+
+

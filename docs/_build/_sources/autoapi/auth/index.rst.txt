@@ -1,0 +1,74 @@
+:py:mod:`auth`
+==============
+
+.. py:module:: auth
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   auth.DBUser
+   auth.AdminUser
+   auth.JWTBearer
+
+
+
+
+.. py:class:: DBUser(user_id: str)
+
+   Bases: :py:obj:`starlette.authentication.BaseUser`
+
+   .. py:method:: is_authenticated(self) -> bool
+      :property:
+
+
+   .. py:method:: display_name(self) -> str
+      :property:
+
+
+   .. py:method:: admin_role(self)
+      :property:
+
+
+
+.. py:class:: AdminUser(user_id: str, admin_role)
+
+   Bases: :py:obj:`starlette.authentication.BaseUser`
+
+   .. py:method:: is_authenticated(self) -> bool
+      :property:
+
+
+   .. py:method:: display_name(self) -> str
+      :property:
+
+
+   .. py:method:: admin_role(self)
+      :property:
+
+
+
+.. py:class:: JWTBearer(auto_error: bool = True, admin: bool = False)
+
+   Bases: :py:obj:`fastapi.security.HTTPBearer`, :py:obj:`starlette.authentication.AuthenticationBackend`
+
+   .. py:method:: __call__(self, request: fastapi.requests.Request)
+      :async:
+
+
+   .. py:method:: verify_jwt(self, jwtoken: str, refresh=None) -> bool
+
+
+   .. py:method:: get_jwt(self) -> str
+
+
+   .. py:method:: authenticate(self, request: fastapi.requests.Request)
+      :async:
+
+
+

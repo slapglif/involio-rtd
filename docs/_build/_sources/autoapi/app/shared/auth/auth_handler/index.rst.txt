@@ -1,0 +1,82 @@
+:py:mod:`app.shared.auth.auth_handler`
+======================================
+
+.. py:module:: app.shared.auth.auth_handler
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   app.shared.auth.auth_handler.AuthController
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   app.shared.auth.auth_handler.JWT_SECRET
+   app.shared.auth.auth_handler.JWT_ALGORITHM
+   app.shared.auth.auth_handler.ADMIN_SECRET
+
+
+.. py:data:: JWT_SECRET
+   
+
+   
+
+.. py:data:: JWT_ALGORITHM
+   
+
+   
+
+.. py:data:: ADMIN_SECRET
+   
+
+   
+
+.. py:class:: AuthController
+
+   Bases: :py:obj:`app.shared.bases.base_model.ModelMixin`
+
+   AuthController for common JWT Functions
+
+   .. py:method:: token_response(cls, token: str, refresh_token: str)
+      :classmethod:
+
+      The token_response function returns a dictionary containing the token and refresh_token.
+      The function takes in two parameters, token and refresh_token. The function returns a dictionary
+      containing the token and refresh_token.
+
+      :param cls: Used to Set the class of the object that is being created.
+      :param token:str: Used to Store the token that is returned by the oauth2 server.
+      :param refresh_token:str: Used to Create a new access token.
+      :return: A dictionary with the following keys:.
+
+
+
+
+   .. py:method:: sign_jwt(cls: app.shared.bases.base_model.ModelType, claim_id: str, admin=False, refresh=False, claim_check=False, skip_verification=False)
+
+
+   .. py:method:: decode_jwt(cls, token: str, admin=False, refresh=False) -> dict
+      :classmethod:
+
+      The decode_jwt function takes a token and checks if it is valid. If the token is valid,
+      it returns the claims of that token. Otherwise, it returns None.
+
+      :param cls: Used to Pass in the class itself.
+      :param token:str: Used to Pass in the token that is being decoded.
+      :param admin: Used to Determine if the token is an admin token or a user token.
+      :param refresh: Used to Determine if the token is a refresh token.
+      :return: The decoded token as a dictionary.
+
+
+

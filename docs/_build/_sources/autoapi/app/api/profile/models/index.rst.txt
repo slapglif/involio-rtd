@@ -1,0 +1,111 @@
+:py:mod:`app.api.profile.models`
+================================
+
+.. py:module:: app.api.profile.models
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   app.api.profile.models.Profile
+
+
+
+
+.. py:class:: Profile
+
+   Bases: :py:obj:`app.shared.bases.base_model.ModelMixin`
+
+   .. py:attribute:: __tablename__
+      :annotation: = user_profile
+
+      
+
+   .. py:attribute:: id
+      
+
+      
+
+   .. py:attribute:: owner_id
+      
+
+      
+
+   .. py:attribute:: owner
+      
+
+      
+
+   .. py:attribute:: bio
+      
+
+      
+
+   .. py:attribute:: location
+      
+
+      
+
+   .. py:attribute:: favorite_investment
+      
+
+      
+
+   .. py:attribute:: favorite_books
+      
+
+      
+
+   .. py:attribute:: favorite_podcasts
+      
+
+      
+
+   .. py:attribute:: owner_avatar_id
+      
+
+      
+
+   .. py:attribute:: owner_avatar
+      
+
+      
+
+   .. py:attribute:: created_at
+      
+
+      
+
+   .. py:attribute:: updated_at
+      
+
+      
+
+   .. py:method:: update_profile(cls, *_, **kwargs)
+      :classmethod:
+
+      The update_profile function updates the profile of a user.
+      It takes in a username and updates their profile with the given information.
+
+      :param cls: Used to Refer to the class itself, so that we can call methods of the class.
+      :param *_: Used to Catch all the positional arguments that are passed to the function.
+      :param **kwargs: Used to Pass a variable-length list of keyword arguments to a function.
+      :return: The profile object that is created by the get_or_create function.
+
+
+   .. py:method:: get_user_profile(cls, user_id: sqlalchemy.dialects.postgresql.UUID)
+      :classmethod:
+
+      The get_user_profile function returns a user's profile.
+
+      :param cls: Used to Make it possible to call the method from either user or profile.
+      :param user_id:UUID: Used to Pass in the user_id as a parameter to the function.
+      :return: A dictionary.
+
+
+

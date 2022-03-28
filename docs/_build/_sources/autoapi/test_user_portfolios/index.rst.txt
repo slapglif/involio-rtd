@@ -1,0 +1,22 @@
+:py:mod:`test_user_portfolios`
+==============================
+
+.. py:module:: test_user_portfolios
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   test_user_portfolios.test_get_portfolio
+
+
+
+.. py:function:: test_get_portfolio()
+
+

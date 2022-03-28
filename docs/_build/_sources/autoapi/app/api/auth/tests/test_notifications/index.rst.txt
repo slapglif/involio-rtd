@@ -1,0 +1,49 @@
+:py:mod:`app.api.auth.tests.test_notifications`
+===============================================
+
+.. py:module:: app.api.auth.tests.test_notifications
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   app.api.auth.tests.test_notifications.test_verification_email
+   app.api.auth.tests.test_notifications.test_recovery_email
+   app.api.auth.tests.test_notifications.test_sms
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   app.api.auth.tests.test_notifications.client
+   app.api.auth.tests.test_notifications.test_user
+
+
+.. py:data:: client
+   
+
+   
+
+.. py:data:: test_user
+   
+
+   
+
+.. py:function:: test_verification_email()
+
+
+.. py:function:: test_recovery_email()
+
+
+.. py:function:: test_sms()
+
+

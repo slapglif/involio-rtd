@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>json_encoders &mdash; Involio Backend 0.0.3 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Involio Backend
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Involio Backend</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">json_encoders</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/autoapi/json_encoders/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-json_encoders">
+<span id="json-encoders"></span><h1><a class="reference internal" href="#module-json_encoders" title="json_encoders"><code class="xref py py-mod docutils literal notranslate"><span class="pre">json_encoders</span></code></a><a class="headerlink" href="#module-json_encoders" title="Permalink to this headline"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#json_encoders.ModelEncoder" title="json_encoders.ModelEncoder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ModelEncoder</span></code></a></p></td>
+<td><p>Extensible JSON &lt;<a class="reference external" href="http://json.org">http://json.org</a>&gt; encoder for Python data structures.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#json_encoders._JSONEncoder" title="json_encoders._JSONEncoder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_JSONEncoder</span></code></a></p></td>
+<td><p>Extensible JSON &lt;<a class="reference external" href="http://json.org">http://json.org</a>&gt; encoder for Python data structures.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#json_encoders.ModelDecoder" title="json_encoders.ModelDecoder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ModelDecoder</span></code></a></p></td>
+<td><p>Simple JSON &lt;<a class="reference external" href="http://json.org">http://json.org</a>&gt; decoder</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#json_encoders._JSONDecoder" title="json_encoders._JSONDecoder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_JSONDecoder</span></code></a></p></td>
+<td><p>Simple JSON &lt;<a class="reference external" href="http://json.org">http://json.org</a>&gt; decoder</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#json_encoders.CustomJSONEncoder" title="json_encoders.CustomJSONEncoder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CustomJSONEncoder</span></code></a></p></td>
+<td><p>Extensible JSON &lt;<a class="reference external" href="http://json.org">http://json.org</a>&gt; encoder for Python data structures.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#json_encoders.CustomJSONDecoder" title="json_encoders.CustomJSONDecoder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CustomJSONDecoder</span></code></a></p></td>
+<td><p>Simple JSON &lt;<a class="reference external" href="http://json.org">http://json.org</a>&gt; decoder</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#json_encoders.datetime_parser" title="json_encoders.datetime_parser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime_parser</span></code></a>(json_dict)</p></td>
+<td><p>The datetime_parser function attempts to parse any datetime strings in the JSON object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#json_encoders.decode_model" title="json_encoders.decode_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">decode_model</span></code></a>(cache_data)</p></td>
+<td><p>The decode_model function takes a dictionary of the form returned by the</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="json_encoders.datetime_parser">
+<span class="sig-prename descclassname"><span class="pre">json_encoders.</span></span><span class="sig-name descname"><span class="pre">datetime_parser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#json_encoders.datetime_parser" title="Permalink to this definition"></a></dt>
+<dd><p>The datetime_parser function attempts to parse any datetime strings in the JSON object.
+If a datetime string is successfully parsed, it is replaced with a Python datetime object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>json_dict</strong> – Used to Pass the json_dict to be parsed.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary with the datetime objects.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="json_encoders.ModelEncoder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">json_encoders.</span></span><span class="sig-name descname"><span class="pre">ModelEncoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skipkeys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ensure_ascii</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_circular</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_nan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separators</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#json_encoders.ModelEncoder" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">json.JSONEncoder</span></code></p>
+<p>Extensible JSON &lt;<a class="reference external" href="http://json.org">http://json.org</a>&gt; encoder for Python data structures.</p>
+<p>Supports the following objects and types by default:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 56%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Python</p></th>
+<th class="head"><p>JSON</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>dict</p></td>
+<td><p>object</p></td>
+</tr>
+<tr class="row-odd"><td><p>list, tuple</p></td>
+<td><p>array</p></td>
+</tr>
+<tr class="row-even"><td><p>str</p></td>
+<td><p>string</p></td>
+</tr>
+<tr class="row-odd"><td><p>int, float</p></td>
+<td><p>number</p></td>
+</tr>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-even"><td><p>None</p></td>
+<td><p>null</p></td>
+</tr>
+</tbody>
+</table>
+<p>To extend this to recognize other objects, subclass and implement a
+<code class="docutils literal notranslate"><span class="pre">.default()</span></code> method with another method that returns a serializable
+object for <code class="docutils literal notranslate"><span class="pre">o</span></code> if possible, otherwise it should call the superclass
+implementation (to raise <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>).</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="json_encoders.ModelEncoder.default">
+<span class="sig-name descname"><span class="pre">default</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#json_encoders.ModelEncoder.default" title="Permalink to this definition"></a></dt>
+<dd><p>The default function is used to serialize objects that are not natively
+serializable by the JSON encoder. This function will be called on any object
+that is passed to the json.dumps() method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self</strong> – Used to Access variables that belongs to the class.</p></li>
+<li><p><strong>obj</strong> – Used to Pass in the object to be serialized.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="json_encoders._JSONEncoder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">json_encoders.</span></span><span class="sig-name descname"><span class="pre">_JSONEncoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skipkeys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ensure_ascii</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_circular</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_nan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separators</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#json_encoders._JSONEncoder" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">json.JSONEncoder</span></code></p>
+<p>Extensible JSON &lt;<a class="reference external" href="http://json.org">http://json.org</a>&gt; encoder for Python data structures.</p>
+<p>Supports the following objects and types by default:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 56%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Python</p></th>
+<th class="head"><p>JSON</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>dict</p></td>
+<td><p>object</p></td>
+</tr>
+<tr class="row-odd"><td><p>list, tuple</p></td>
+<td><p>array</p></td>
+</tr>
+<tr class="row-even"><td><p>str</p></td>
+<td><p>string</p></td>
+</tr>
+<tr class="row-odd"><td><p>int, float</p></td>
+<td><p>number</p></td>
+</tr>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-even"><td><p>None</p></td>
+<td><p>null</p></td>
+</tr>
+</tbody>
+</table>
+<p>To extend this to recognize other objects, subclass and implement a
+<code class="docutils literal notranslate"><span class="pre">.default()</span></code> method with another method that returns a serializable
+object for <code class="docutils literal notranslate"><span class="pre">o</span></code> if possible, otherwise it should call the superclass
+implementation (to raise <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>).</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="json_encoders._JSONEncoder.default">
+<span class="sig-name descname"><span class="pre">default</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#json_encoders._JSONEncoder.default" title="Permalink to this definition"></a></dt>
+<dd><p>The default function is used to serialize objects that are not natively
+serializable by the JSON encoder. This function will be called on objects
+that are not serializable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self</strong> – Used to Access the attributes and methods of the class.</p></li>
+<li><p><strong>obj</strong> – Used to Pass in the object that is being serialized.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The object itself.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="json_encoders.decode_model">
+<span class="sig-prename descclassname"><span class="pre">json_encoders.</span></span><span class="sig-name descname"><span class="pre">decode_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cache_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#json_encoders.decode_model" title="Permalink to this definition"></a></dt>
+<dd><p>The decode_model function takes a dictionary of the form returned by the
+encode_model function and converts it back to a list of dictionaries. This is
+useful for debugging, but also necessary when calling functions that expect an
+encoded model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cache_data</strong> – Used to Retrieve the data from the cache.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of dictionaries.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="json_encoders.ModelDecoder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">json_encoders.</span></span><span class="sig-name descname"><span class="pre">ModelDecoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_hook</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parse_float</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parse_int</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parse_constant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_pairs_hook</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#json_encoders.ModelDecoder" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">json.JSONDecoder</span></code></p>
+<p>Simple JSON &lt;<a class="reference external" href="http://json.org">http://json.org</a>&gt; decoder</p>
+<p>Performs the following translations in decoding by default:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>JSON</p></th>
+<th class="head"><p>Python</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>object</p></td>
+<td><p>dict</p></td>
+</tr>
+<tr class="row-odd"><td><p>array</p></td>
+<td><p>list</p></td>
+</tr>
+<tr class="row-even"><td><p>string</p></td>
+<td><p>str</p></td>
+</tr>
+<tr class="row-odd"><td><p>number (int)</p></td>
+<td><p>int</p></td>
+</tr>
+<tr class="row-even"><td><p>number (real)</p></td>
+<td><p>float</p></td>
+</tr>
+<tr class="row-odd"><td><p>true</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-even"><td><p>false</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>null</p></td>
+<td><p>None</p></td>
+</tr>
+</tbody>
+</table>
+<p>It also understands <code class="docutils literal notranslate"><span class="pre">NaN</span></code>, <code class="docutils literal notranslate"><span class="pre">Infinity</span></code>, and <code class="docutils literal notranslate"><span class="pre">-Infinity</span></code> as
+their corresponding <code class="docutils literal notranslate"><span class="pre">float</span></code> values, which is outside the JSON spec.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="json_encoders.ModelDecoder.default">
+<span class="sig-name descname"><span class="pre">default</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#json_encoders.ModelDecoder.default" title="Permalink to this definition"></a></dt>
+<dd><p>The default function is used to serialize objects that do not have a
+serialize method. It serializes the object using json.dumps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self</strong> – Used to Reference the class itself.</p></li>
+<li><p><strong>obj</strong> – Used to Pass in the object that is being encoded.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The object itself.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="json_encoders._JSONDecoder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">json_encoders.</span></span><span class="sig-name descname"><span class="pre">_JSONDecoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#json_encoders._JSONDecoder" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">json.JSONDecoder</span></code></p>
+<p>Simple JSON &lt;<a class="reference external" href="http://json.org">http://json.org</a>&gt; decoder</p>
+<p>Performs the following translations in decoding by default:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>JSON</p></th>
+<th class="head"><p>Python</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>object</p></td>
+<td><p>dict</p></td>
+</tr>
+<tr class="row-odd"><td><p>array</p></td>
+<td><p>list</p></td>
+</tr>
+<tr class="row-even"><td><p>string</p></td>
+<td><p>str</p></td>
+</tr>
+<tr class="row-odd"><td><p>number (int)</p></td>
+<td><p>int</p></td>
+</tr>
+<tr class="row-even"><td><p>number (real)</p></td>
+<td><p>float</p></td>
+</tr>
+<tr class="row-odd"><td><p>true</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-even"><td><p>false</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>null</p></td>
+<td><p>None</p></td>
+</tr>
+</tbody>
+</table>
+<p>It also understands <code class="docutils literal notranslate"><span class="pre">NaN</span></code>, <code class="docutils literal notranslate"><span class="pre">Infinity</span></code>, and <code class="docutils literal notranslate"><span class="pre">-Infinity</span></code> as
+their corresponding <code class="docutils literal notranslate"><span class="pre">float</span></code> values, which is outside the JSON spec.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="json_encoders._JSONDecoder.object_hook">
+<span class="sig-name descname"><span class="pre">object_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#json_encoders._JSONDecoder.object_hook" title="Permalink to this definition"></a></dt>
+<dd><p>The object_hook function is used to convert the JSON object into a Python dictionary.
+The datetime and date objects are converted from ISO format strings to Python datetime objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self</strong> – Used to Reference the class itself.</p></li>
+<li><p><strong>obj</strong> – Used to Pass in the dictionary that is being decoded.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary of the key value pairs in the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="json_encoders.CustomJSONEncoder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">json_encoders.</span></span><span class="sig-name descname"><span class="pre">CustomJSONEncoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skipkeys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ensure_ascii</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_circular</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_nan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separators</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#json_encoders.CustomJSONEncoder" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">json.JSONEncoder</span></code></p>
+<p>Extensible JSON &lt;<a class="reference external" href="http://json.org">http://json.org</a>&gt; encoder for Python data structures.</p>
+<p>Supports the following objects and types by default:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 56%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Python</p></th>
+<th class="head"><p>JSON</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>dict</p></td>
+<td><p>object</p></td>
+</tr>
+<tr class="row-odd"><td><p>list, tuple</p></td>
+<td><p>array</p></td>
+</tr>
+<tr class="row-even"><td><p>str</p></td>
+<td><p>string</p></td>
+</tr>
+<tr class="row-odd"><td><p>int, float</p></td>
+<td><p>number</p></td>
+</tr>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-even"><td><p>None</p></td>
+<td><p>null</p></td>
+</tr>
+</tbody>
+</table>
+<p>To extend this to recognize other objects, subclass and implement a
+<code class="docutils literal notranslate"><span class="pre">.default()</span></code> method with another method that returns a serializable
+object for <code class="docutils literal notranslate"><span class="pre">o</span></code> if possible, otherwise it should call the superclass
+implementation (to raise <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>).</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="json_encoders.CustomJSONEncoder.default">
+<span class="sig-name descname"><span class="pre">default</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#json_encoders.CustomJSONEncoder.default" title="Permalink to this definition"></a></dt>
+<dd><p>The default function is used to serialize objects that are not natively
+serializable by the JSON encoder. This function will be called on objects
+that aren’t natively serializable by the encoder. The default function will
+be passed the object to convert and should return a serialized representation
+of that object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self</strong> – Used to Access variables that belongs to the class.</p></li>
+<li><p><strong>obj</strong> – Used to Pass in the object to be serialized.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The default value for the object type.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="json_encoders.CustomJSONDecoder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">json_encoders.</span></span><span class="sig-name descname"><span class="pre">CustomJSONDecoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#json_encoders.CustomJSONDecoder" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">json.JSONDecoder</span></code></p>
+<p>Simple JSON &lt;<a class="reference external" href="http://json.org">http://json.org</a>&gt; decoder</p>
+<p>Performs the following translations in decoding by default:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>JSON</p></th>
+<th class="head"><p>Python</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>object</p></td>
+<td><p>dict</p></td>
+</tr>
+<tr class="row-odd"><td><p>array</p></td>
+<td><p>list</p></td>
+</tr>
+<tr class="row-even"><td><p>string</p></td>
+<td><p>str</p></td>
+</tr>
+<tr class="row-odd"><td><p>number (int)</p></td>
+<td><p>int</p></td>
+</tr>
+<tr class="row-even"><td><p>number (real)</p></td>
+<td><p>float</p></td>
+</tr>
+<tr class="row-odd"><td><p>true</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-even"><td><p>false</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>null</p></td>
+<td><p>None</p></td>
+</tr>
+</tbody>
+</table>
+<p>It also understands <code class="docutils literal notranslate"><span class="pre">NaN</span></code>, <code class="docutils literal notranslate"><span class="pre">Infinity</span></code>, and <code class="docutils literal notranslate"><span class="pre">-Infinity</span></code> as
+their corresponding <code class="docutils literal notranslate"><span class="pre">float</span></code> values, which is outside the JSON spec.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="json_encoders.CustomJSONDecoder.object_hook">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">object_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#json_encoders.CustomJSONDecoder.object_hook" title="Permalink to this definition"></a></dt>
+<dd><p>The object_hook function is used to convert the JSON string into a Python object.
+The datetime module is used to parse the date strings and convert them into a format that can be manipulated by Python.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cls</strong> – Used to Pass the class of the object being created.</p></li>
+<li><p><strong>source</strong> – Used to Pass the json object to be parsed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The source dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Michael Brown.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

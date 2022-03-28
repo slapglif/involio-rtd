@@ -1,0 +1,22 @@
+:py:mod:`test_strategy`
+=======================
+
+.. py:module:: test_strategy
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   test_strategy.test_get_strat
+
+
+
+.. py:function:: test_get_strat()
+
+

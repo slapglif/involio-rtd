@@ -1,0 +1,77 @@
+:py:mod:`tests.test_post_comments`
+==================================
+
+.. py:module:: tests.test_post_comments
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   tests.test_post_comments.test_post_comments_smoke
+   tests.test_post_comments.test_post_comments_regression
+   tests.test_post_comments.test_comment_update
+   tests.test_post_comments.test_comment_post
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   tests.test_post_comments.url
+   tests.test_post_comments.post_id
+   tests.test_post_comments.context
+   tests.test_post_comments.paged_posts
+   tests.test_post_comments.post_id
+
+
+.. py:data:: url
+   :annotation: = /api/social/comment/get_post_comments
+
+   
+
+.. py:data:: post_id
+   :annotation: = c6a6e29e-8003-4be3-9da5-d3361be51b91
+
+   
+
+.. py:data:: context
+   
+
+   
+
+.. py:data:: paged_posts
+   :annotation: :app.shared.bases.base_test.GetPagedPost
+
+   
+
+.. py:data:: post_id
+   
+
+   
+
+.. py:function:: test_post_comments_smoke()
+
+
+.. py:function:: test_post_comments_regression()
+
+   It tests the post_comments endpoint.
+
+
+.. py:function:: test_comment_update()
+
+   It creates a comment on an update
+
+
+.. py:function:: test_comment_post()
+
+   It creates a comment on a post.
+
+

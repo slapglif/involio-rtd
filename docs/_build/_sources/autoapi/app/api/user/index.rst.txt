@@ -1,0 +1,17 @@
+:py:mod:`app.api.user`
+======================
+
+.. py:module:: app.api.user
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   models/index.rst
+   schema/index.rst
+   views/index.rst
+
+

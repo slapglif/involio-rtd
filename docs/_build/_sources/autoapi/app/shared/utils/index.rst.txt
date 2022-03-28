@@ -1,0 +1,16 @@
+:py:mod:`app.shared.utils`
+==========================
+
+.. py:module:: app.shared.utils
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   data_seeder/index.rst
+   timer/index.rst
+
+

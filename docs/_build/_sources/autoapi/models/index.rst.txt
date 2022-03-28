@@ -1,0 +1,66 @@
+:py:mod:`models`
+================
+
+.. py:module:: models
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   models.TopicType
+
+
+
+
+.. py:class:: TopicType
+
+   Bases: :py:obj:`app.shared.bases.base_model.ModelMixin`
+
+   Generic Mixin Model to provide helper functions that all Model classes need
+
+   .. py:attribute:: __tablename__
+      :annotation: = topic_type
+
+      
+
+   .. py:attribute:: id
+      
+
+      
+
+   .. py:attribute:: name
+      
+
+      
+
+   .. py:attribute:: created_at
+      
+
+      
+
+   .. py:method:: create_topic_type(cls, *_, **kwargs)
+      :classmethod:
+
+
+   .. py:method:: create_topic_type_seeder(cls, name, id)
+      :classmethod:
+
+
+   .. py:method:: get_all_topic_types(cls, *_, **kwargs)
+      :classmethod:
+
+
+   .. py:method:: get_topic_type_by_id(cls, topic_type_id)
+      :classmethod:
+
+
+   .. py:method:: remove_topic_type(cls, *_, **kwargs)
+      :classmethod:
+
+
+

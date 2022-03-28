@@ -1,0 +1,26 @@
+:py:mod:`mailgun`
+=================
+
+.. py:module:: mailgun
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   mailgun.send_verification_email
+   mailgun.send_recovery_email
+
+
+
+.. py:function:: send_verification_email(email, token)
+
+
+.. py:function:: send_recovery_email(email, token)
+
+

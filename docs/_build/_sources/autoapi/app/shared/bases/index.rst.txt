@@ -1,0 +1,17 @@
+:py:mod:`app.shared.bases`
+==========================
+
+.. py:module:: app.shared.bases
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   base_data/index.rst
+   base_model/index.rst
+   base_test/index.rst
+
+

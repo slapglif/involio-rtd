@@ -1,0 +1,41 @@
+:py:mod:`sms`
+=============
+
+.. py:module:: sms
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   sms.send_sms
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   sms.logger
+   sms.client
+
+
+.. py:data:: logger
+   
+
+   
+
+.. py:data:: client
+   
+
+   
+
+.. py:function:: send_sms(phone: str, body: str)
+
+

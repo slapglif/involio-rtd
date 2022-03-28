@@ -1,0 +1,43 @@
+:py:mod:`app.shared.auth.password_handler`
+==========================================
+
+.. py:module:: app.shared.auth.password_handler
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   app.shared.auth.password_handler.verify_password
+   app.shared.auth.password_handler.get_password_hash
+   app.shared.auth.password_handler.authenticate_user
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   app.shared.auth.password_handler.pwd_context
+
+
+.. py:data:: pwd_context
+   
+
+   
+
+.. py:function:: verify_password(plain_password: str, hashed_password: str) -> bool
+
+
+.. py:function:: get_password_hash(password: str) -> str
+
+
+.. py:function:: authenticate_user(phone: str, admin=False) -> Union[bool, app.api.user.models.User]
+
+

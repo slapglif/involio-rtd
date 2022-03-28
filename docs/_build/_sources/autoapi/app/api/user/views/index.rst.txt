@@ -1,0 +1,65 @@
+:py:mod:`app.api.user.views`
+============================
+
+.. py:module:: app.api.user.views
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   app.api.user.views.post_user_data
+   app.api.user.views.get_user_data
+   app.api.user.views.set_name
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   app.api.user.views.router
+
+
+.. py:data:: router
+   
+
+   
+
+.. py:function:: post_user_data(context: app.api.user.schema.GetUser)
+   :async:
+
+   The post_user_data function is used to create a new user in the database.
+   It takes a context argument, which is an instance of schema.GetUser.
+
+   :param context:schema.GetUser: Used to Pass the user data to the function.
+   :return: A GetUserResponse object.
+
+
+.. py:function:: get_user_data(request: fastapi.Request)
+   :async:
+
+   The get_user_data function returns the user data for a given user.
+
+   :param request:Request: Used to Get the user object from the request.
+   :return: A dictionary with the user's username, email and is_superuser attributes.
+
+
+.. py:function:: set_name(context: app.api.user.schema.UserUpdateName, request: fastapi.Request)
+   :async:
+
+   The set_name function updates the name of a user.
+   It expects a full name ex. "Jory Lenz"
+
+   :param context:schema.UserUpdateName: Used to Pass in the name.
+   :param request:Request: Used to Get the user id.
+   :return: The new name.
+
+
+

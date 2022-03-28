@@ -1,0 +1,30 @@
+:py:mod:`test_investments`
+==========================
+
+.. py:module:: test_investments
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   test_investments.test_get_investments
+   test_investments.test_create_investment
+   test_investments.test_set_investment_percent
+
+
+
+.. py:function:: test_get_investments()
+
+
+.. py:function:: test_create_investment()
+
+
+.. py:function:: test_set_investment_percent()
+
+

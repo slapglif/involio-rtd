@@ -1,0 +1,15 @@
+:py:mod:`app.shared.exception`
+==============================
+
+.. py:module:: app.shared.exception
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   utils/index.rst
+
+

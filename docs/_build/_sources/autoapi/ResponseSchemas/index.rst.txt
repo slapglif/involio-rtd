@@ -1,0 +1,94 @@
+:py:mod:`ResponseSchemas`
+=========================
+
+.. py:module:: ResponseSchemas
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   ResponseSchemas.BaseResponse
+   ResponseSchemas.GetObjectsResponse
+   ResponseSchemas.GetObjectResponse
+   ResponseSchemas.CloseObjectsResponse
+   ResponseSchemas.CreateObjectResponse
+
+
+
+
+.. py:class:: BaseResponse
+
+   Bases: :py:obj:`app.shared.schemas.orm_schema.ORMCamelModel`
+
+   Base Response abstraction for standardized returns
+
+   .. py:class:: Config
+
+      .. py:attribute:: arbitrary_types_allowed
+         :annotation: = True
+
+         
+
+
+   .. py:attribute:: success
+      :annotation: :bool
+
+      
+
+   .. py:attribute:: error
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: response
+      :annotation: :Optional[Union[str, dict, List[dict]]]
+
+      
+
+
+.. py:class:: GetObjectsResponse
+
+   Bases: :py:obj:`BaseResponse`
+
+   GetObjectsResponse is a response object that
+   contains a list of objects
+
+   .. py:attribute:: response
+      :annotation: :List[Any]
+
+      
+
+
+.. py:class:: GetObjectResponse
+
+   Bases: :py:obj:`BaseResponse`
+
+   GetObjectResponse is a response object that
+   contains a single item in the response body
+
+   .. py:attribute:: response
+      :annotation: :Any
+
+      
+
+
+.. py:class:: CloseObjectsResponse
+
+   Bases: :py:obj:`BaseResponse`
+
+   It's a response object that tells the client what to
+   expect when calling the `CloseObject` method.
+
+
+.. py:class:: CreateObjectResponse
+
+   Bases: :py:obj:`BaseResponse`
+
+   CreateObjectResponse creates a response object for the given API request.
+
+

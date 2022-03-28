@@ -1,0 +1,78 @@
+:py:mod:`app.api.update.views`
+==============================
+
+.. py:module:: app.api.update.views
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   app.api.update.views.create_update
+   app.api.update.views.create_update
+   app.api.update.views.modify_update
+   app.api.update.views.get_portfolio_updates
+   app.api.update.views.get_strategy_updates
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   app.api.update.views.router
+
+
+.. py:data:: router
+   
+
+   
+
+.. py:function:: create_update(context: app.api.update.schema.CreateStrategyUpdate, request: fastapi.Request)
+   :async:
+
+
+.. py:function:: create_update(context: app.api.update.schema.CreatePortfolioUpdate, request: fastapi.Request)
+   :async:
+
+
+.. py:function:: modify_update(context: app.api.update.schema.ModifyUpdate, request: fastapi.Request)
+   :async:
+
+   The modify_update function is used to modify the content of an update.
+   It takes in a context object, which contains the update_id and new content of the update.
+   The function then checks if that user is authorized to modify that particular post, and if so modifies it.
+
+   :param context:schema.ModifyUpdate: Used to Pass the update_id and update_content to the function.
+   :param request:Request: Used to Get the user who is making the request.
+   :return: A modifyupdateresponse object.
+
+
+
+
+.. py:function:: get_portfolio_updates(context: app.api.update.schema.GetPortfolioUpdates)
+   :async:
+
+   The get_portfolio_updates function returns the portfolio updates for a given portfolio.
+
+   :param context:schema.GetPortfolioUpdates: Used to Specify the portfolio_id for which to return the updates.
+   :return: The portfolio_id.
+
+
+
+.. py:function:: get_strategy_updates(context: app.api.update.schema.GetStrategyUpdates)
+   :async:
+
+   The get_strategy_updates function returns a list of strategy updates for the given strategy_id.
+
+   :param context:schema.GetStrategyUpdates: Used to Pass the strategy_id to the function.
+   :return: A list of strategy updates for the given strategy id.
+
+
+

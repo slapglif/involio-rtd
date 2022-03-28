@@ -1,0 +1,28 @@
+:py:mod:`app.shared.utils.timer`
+================================
+
+.. py:module:: app.shared.utils.timer
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   app.shared.utils.timer.Timer
+
+
+
+
+.. py:class:: Timer
+
+   .. py:method:: start(self)
+
+
+   .. py:method:: end(self)
+
+
+

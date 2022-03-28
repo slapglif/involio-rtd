@@ -1,0 +1,73 @@
+:py:mod:`app.api.follow.views`
+==============================
+
+.. py:module:: app.api.follow.views
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   app.api.follow.views.follow_user
+   app.api.follow.views.get_user_followers
+   app.api.follow.views.get_user_following
+   app.api.follow.views.unfollow_user
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   app.api.follow.views.router
+
+
+.. py:data:: router
+   
+
+   
+
+.. py:function:: follow_user(context: app.api.follow.schema.CreateFollower, request: fastapi.Request)
+   :async:
+
+   The follow_user function allows a user to follow another user.
+
+   :param context:schema.CreateFollower: Used to Pass the data from the.
+   :param request:Request: Used to Pass in the current user.
+   :return: A schema.
+
+
+.. py:function:: get_user_followers(context: app.api.follow.schema.GetFollowers)
+   :async:
+
+   The get_user_followers function returns a list of users who follow the user with id `user_id`.
+
+   :param context:schema.GetFollowers: Used to Pass the user_id to the function.
+   :return: A list of user_id's that follow the user with id=user_id.
+
+
+.. py:function:: get_user_following(context: app.api.follow.schema.GetFollowing)
+   :async:
+
+   The get_user_following function returns a list of users that the user with id `user_id` is following.
+
+   :param context:schema.GetFollowing: Used to Pass the user_id of the user whose following list is being requested.
+   :return: A list of user_ids that the user is following
+
+
+.. py:function:: unfollow_user(context: app.api.follow.schema.RemoveFollow, request: fastapi.Request)
+   :async:
+
+   The unfollow_user function removes a follow relationship between the user and another user.
+
+   :param context:schema.RemoveFollow: Used to Pass the id of the user that is being unfollowed.
+   :param request:Request: Used to Get the user id of the currently logged-in user.
+   :return: A deleted follow response.
+
+

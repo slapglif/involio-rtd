@@ -1,0 +1,18 @@
+:py:mod:`app.shared.auth`
+=========================
+
+.. py:module:: app.shared.auth
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   auth0_handler/index.rst
+   auth_handler/index.rst
+   password_handler/index.rst
+   token_handler/index.rst
+
+

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>app.api.auth.views &mdash; Involio Backend 0.0.3 documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../index.html" class="icon icon-home"> Involio Backend
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Involio Backend</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">app.api.auth.views</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/autoapi/app/api/auth/views/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-app.api.auth.views">
+<span id="app-api-auth-views"></span><h1><a class="reference internal" href="#module-app.api.auth.views" title="app.api.auth.views"><code class="xref py py-mod docutils literal notranslate"><span class="pre">app.api.auth.views</span></code></a><a class="headerlink" href="#module-app.api.auth.views" title="Permalink to this headline"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline"></a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.auth.views.create_user" title="app.api.auth.views.create_user"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_user</span></code></a>(user: app.api.user.schema.UserCreate) → Union[Union[dict[str, Any], app.api.admin.schema.Response, None, str], Any]</p></td>
+<td><p>The create_user function creates a new user in the database.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.auth.views.magic_start" title="app.api.auth.views.magic_start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">magic_start</span></code></a>(user: app.api.user.schema.UserLogin) → dict</p></td>
+<td><p>The magic_start function sends a magic link to the user's phone number.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.auth.views.user_login" title="app.api.auth.views.user_login"><code class="xref py py-obj docutils literal notranslate"><span class="pre">user_login</span></code></a>(token: str)</p></td>
+<td><p>The user_login function takes a token and returns a RedirectResponse to the Insiders app.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.auth.views.refresh_token" title="app.api.auth.views.refresh_token"><code class="xref py py-obj docutils literal notranslate"><span class="pre">refresh_token</span></code></a>(request: fastapi.Request)</p></td>
+<td><p>The refresh_token function is used to generate a new access token from the refresh token.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.auth.views.refresh_token_admin" title="app.api.auth.views.refresh_token_admin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">refresh_token_admin</span></code></a>(request: fastapi.Request)</p></td>
+<td><p>The refresh_token_admin function is used to refresh the token of an admin user.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.auth.views.admin_login" title="app.api.auth.views.admin_login"><code class="xref py py-obj docutils literal notranslate"><span class="pre">admin_login</span></code></a>(user: app.api.user.schema.AdminLogin) → dict</p></td>
+<td><p>The admin_login function takes a user object and returns a JWT token.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.auth.views.otp_start_sms" title="app.api.auth.views.otp_start_sms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">otp_start_sms</span></code></a>(user: app.api.auth.schema.SMSStart)</p></td>
+<td><p>The otp_start_sms function is used to send a text message containing an OTP</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.auth.views.otp_start_email" title="app.api.auth.views.otp_start_email"><code class="xref py py-obj docutils literal notranslate"><span class="pre">otp_start_email</span></code></a>(user: app.api.auth.schema.EmailStart)</p></td>
+<td><p>The otp_start_email function sends an email to the user with a link to start the OTP flow.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.auth.views.otp_login_email" title="app.api.auth.views.otp_login_email"><code class="xref py py-obj docutils literal notranslate"><span class="pre">otp_login_email</span></code></a>(user: app.api.auth.schema.EmailLogin)</p></td>
+<td><p>The otp_login_email function is used to log in a user with an email and password.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.auth.views.otp_login_sms" title="app.api.auth.views.otp_login_sms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">otp_login_sms</span></code></a>(user: app.api.auth.schema.SMSLogin)</p></td>
+<td><p>The otp_login_sms function is used to authenticate a user via SMS.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.auth.views.oid_login" title="app.api.auth.views.oid_login"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oid_login</span></code></a>(request: app.api.auth.schema.OIDLogin)</p></td>
+<td><p>The oid_login function accepts a request object, which is used to pass the</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.auth.views.recover_verify" title="app.api.auth.views.recover_verify"><code class="xref py py-obj docutils literal notranslate"><span class="pre">recover_verify</span></code></a>(user: app.api.auth.schema.Recovery) → dict</p></td>
+<td><p>The recover_verify function is used to verify the user's email address.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.auth.views.delete_self" title="app.api.auth.views.delete_self"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_self</span></code></a>(request: fastapi.Request)</p></td>
+<td><p>The delete_self function will delete the user's account.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.auth.views.router" title="app.api.auth.views.router"><code class="xref py py-obj docutils literal notranslate"><span class="pre">router</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="app.api.auth.views.router">
+<span class="sig-prename descclassname"><span class="pre">app.api.auth.views.</span></span><span class="sig-name descname"><span class="pre">router</span></span><a class="headerlink" href="#app.api.auth.views.router" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.auth.views.create_user">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.views.</span></span><span class="sig-name descname"><span class="pre">create_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../user/schema/index.html#app.api.user.schema.UserCreate" title="app.api.user.schema.UserCreate"><span class="pre">app.api.user.schema.UserCreate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">app.api.admin.schema.Response</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#app.api.auth.views.create_user" title="Permalink to this definition"></a></dt>
+<dd><p>The create_user function creates a new user in the database.
+It takes in a UserCreate object and returns an error if it cannot create the user.
+Otherwise, it returns the newly created user’s id.</p>
+<p>Phone number will accept any form as long as it starts with a +1.
+Birthday has to be in format year-month-day.
+Username cannot contain special characters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>user:schema.UserCreate</strong> – Used to Pass in the user object.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary with a key “error” if the creation fails.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.auth.views.magic_start">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.views.</span></span><span class="sig-name descname"><span class="pre">magic_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../user/schema/index.html#app.api.user.schema.UserLogin" title="app.api.user.schema.UserLogin"><span class="pre">app.api.user.schema.UserLogin</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#app.api.auth.views.magic_start" title="Permalink to this definition"></a></dt>
+<dd><p>The magic_start function sends a magic link to the user’s phone number.
+The magic link is a token that will allow them to login without having their password.
+Phone number can be any form as long as it exists in the db.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>user:schema.UserLogin</strong> – Used to Pass in the user’s phone number and password.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary with the error key and value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.auth.views.user_login">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.views.</span></span><span class="sig-name descname"><span class="pre">user_login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.auth.views.user_login" title="Permalink to this definition"></a></dt>
+<dd><p>The user_login function takes a token and returns a RedirectResponse to the Insiders app.</p>
+<p>The user_login function accepts one argument, <cite>token</cite>, which is used to confirm that the user
+has been authenticated. If so, it returns a RedirectResponse with an authorization header containing
+an access token for use in subsequent requests.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>token:str</strong> – Used to Pass the token that is passed in the url.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A redirect response object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.auth.views.refresh_token">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.views.</span></span><span class="sig-name descname"><span class="pre">refresh_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">fastapi.Request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.auth.views.refresh_token" title="Permalink to this definition"></a></dt>
+<dd><p>The refresh_token function is used to generate a new access token from the refresh token.
+The function takes in the request object and returns an updated access token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request:Request</strong> – Used to Get the request object from the asgi server.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A token that is signed with the refresh_token key.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.auth.views.refresh_token_admin">
+<span class="sig-prename descclassname"><span class="pre">app.api.auth.views.</span></span><span class="sig-name descname"><span class="pre">refresh_token_admin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">fastapi.Request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.auth.views.refresh_token_admin" title="Permalink to this definition"></a></dt>
+<dd><p>The refresh_token_admin function is used to refresh the token of an admin user.
+It takes a request object as its only parameter and returns a dictionary with two keys:
+‘access_token’ and ‘refresh_token’. The access token is for the current session, while the
+refresh token is for future sessions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request:Request</strong> – Used to Get the refresh token from the request.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary containing the following keys:.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.auth.views.admin_login">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.views.</span></span><span class="sig-name descname"><span class="pre">admin_login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../user/schema/index.html#app.api.user.schema.AdminLogin" title="app.api.user.schema.AdminLogin"><span class="pre">app.api.user.schema.AdminLogin</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#app.api.auth.views.admin_login" title="Permalink to this definition"></a></dt>
+<dd><p>The admin_login function takes a user object and returns a JWT token.
+The function uses the Auth0 email_token method to generate an access token for the admin user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>user:schema.AdminLogin</strong> – Used to Pass in the user object.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary with a jwt token.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.auth.views.otp_start_sms">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.views.</span></span><span class="sig-name descname"><span class="pre">otp_start_sms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../schema/index.html#app.api.auth.schema.SMSStart" title="app.api.auth.schema.SMSStart"><span class="pre">app.api.auth.schema.SMSStart</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.auth.views.otp_start_sms" title="Permalink to this definition"></a></dt>
+<dd><p>The otp_start_sms function is used to send a text message containing an OTP
+to the user’s phone number. The function takes in a schema.SMSStart object,
+which contains the user’s phone number and request language preference. If no
+user exists with that phone number, then an error is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>user:schema.SMSStart</strong> – Used to Pass the phone number of the user.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary with the following keys:.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.auth.views.otp_start_email">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.views.</span></span><span class="sig-name descname"><span class="pre">otp_start_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../schema/index.html#app.api.auth.schema.EmailStart" title="app.api.auth.schema.EmailStart"><span class="pre">app.api.auth.schema.EmailStart</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.auth.views.otp_start_email" title="Permalink to this definition"></a></dt>
+<dd><p>The otp_start_email function sends an email to the user with a link to start the OTP flow.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>user:schema.EmailStart</strong> – Used to Specify the email address to send the otp.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A string that is the email address of the user.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.auth.views.otp_login_email">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.views.</span></span><span class="sig-name descname"><span class="pre">otp_login_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../schema/index.html#app.api.auth.schema.EmailLogin" title="app.api.auth.schema.EmailLogin"><span class="pre">app.api.auth.schema.EmailLogin</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.auth.views.otp_login_email" title="Permalink to this definition"></a></dt>
+<dd><p>The otp_login_email function is used to log in a user with an email and password.
+It takes the user’s email and password as input, authenticates them using Auth0,
+and returns the JWT token for that user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>user:schema.EmailLogin</strong> – Used to Pass the email and password to the auth0.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An auth0 response object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.auth.views.otp_login_sms">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.views.</span></span><span class="sig-name descname"><span class="pre">otp_login_sms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../schema/index.html#app.api.auth.schema.SMSLogin" title="app.api.auth.schema.SMSLogin"><span class="pre">app.api.auth.schema.SMSLogin</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.auth.views.otp_login_sms" title="Permalink to this definition"></a></dt>
+<dd><p>The otp_login_sms function is used to authenticate a user via SMS.
+It takes in a phone number and sends an OTP code to that phone number,
+then returns the JWT refresh token for that user. If the phone number is not found, it will return None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>user:schema.SMSLogin</strong> – Used to Validate the user’s input.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary with the following keys:.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.auth.views.oid_login">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.views.</span></span><span class="sig-name descname"><span class="pre">oid_login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../schema/index.html#app.api.auth.schema.OIDLogin" title="app.api.auth.schema.OIDLogin"><span class="pre">app.api.auth.schema.OIDLogin</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.auth.views.oid_login" title="Permalink to this definition"></a></dt>
+<dd><p>The oid_login function accepts a request object, which is used to pass the
+code that was returned by Auth0 after the user has logged in. The function then
+fetches an access token and id_token from Auth0 using this code as its input. If
+the fetching of these tokens succeeds, it returns a response object with no error; if not, it returns an error message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request:schema.OIDLogin</strong> – Used to Validate the input.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary containing the access token and id token.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.auth.views.recover_verify">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.views.</span></span><span class="sig-name descname"><span class="pre">recover_verify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../schema/index.html#app.api.auth.schema.Recovery" title="app.api.auth.schema.Recovery"><span class="pre">app.api.auth.schema.Recovery</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#app.api.auth.views.recover_verify" title="Permalink to this definition"></a></dt>
+<dd><p>The recover_verify function is used to verify the user’s email address.
+It takes a user object and returns a dictionary with two keys: success,
+which is True if the verification was successful, and response, which
+contains an error message if there was one.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>user:schema.Recovery</strong> – Used to Pass the email address of the user that is requesting a password reset.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary with the key “success” and if it is true, a response message.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.auth.views.delete_self">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.auth.views.</span></span><span class="sig-name descname"><span class="pre">delete_self</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">fastapi.Request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.auth.views.delete_self" title="Permalink to this definition"></a></dt>
+<dd><p>The delete_self function will delete the user’s account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request:Request</strong> – Used to Get the user who is currently logged in.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A boolean value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Michael Brown.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

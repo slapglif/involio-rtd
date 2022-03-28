@@ -1,0 +1,26 @@
+:py:mod:`app.shared.auth.token_handler`
+=======================================
+
+.. py:module:: app.shared.auth.token_handler
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   app.shared.auth.token_handler.generate_confirmation_token
+   app.shared.auth.token_handler.confirm_token
+
+
+
+.. py:function:: generate_confirmation_token(data: str)
+
+
+.. py:function:: confirm_token(token, expiration=10000000)
+
+

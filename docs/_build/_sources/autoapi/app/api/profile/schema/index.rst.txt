@@ -1,0 +1,179 @@
+:py:mod:`app.api.profile.schema`
+================================
+
+.. py:module:: app.api.profile.schema
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   app.api.profile.schema.GetUserProfile
+   app.api.profile.schema.Profile
+   app.api.profile.schema.GetUserProfileResponse
+   app.api.profile.schema.SetProfile
+   app.api.profile.schema.SetProfileResponse
+
+
+
+
+.. py:class:: GetUserProfile
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   .. py:class:: Config
+
+      .. py:attribute:: schema_extra
+         
+
+         
+
+
+   .. py:attribute:: owner_id
+      :annotation: :uuid.UUID
+
+      
+
+
+.. py:class:: Profile
+
+   Bases: :py:obj:`app.shared.schemas.orm_schema.ORMCamelModel`
+
+   .. py:attribute:: id
+      :annotation: :uuid.UUID
+
+      
+
+   .. py:attribute:: bio
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: owner_avatar_id
+      :annotation: :Optional[uuid.UUID]
+
+      
+
+   .. py:attribute:: location
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: favorite_investment
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: favorite_books
+      :annotation: :Optional[List[str]]
+
+      
+
+   .. py:attribute:: favorite_podcasts
+      :annotation: :Optional[List[str]]
+
+      
+
+   .. py:method:: blank_string(value, field)
+
+      The blank_string function checks if the value is blank and returns a string
+          of 'None' or the original value.
+
+      :param value: Used to Pass the value of the field to be blanked.
+      :param field: Used to Specify the field in the record that should be returned.
+      :return: The value of the field.
+
+
+
+   .. py:method:: blank_array(value, field)
+
+
+
+.. py:class:: GetUserProfileResponse
+
+   Bases: :py:obj:`app.shared.schemas.ResponseSchemas.BaseResponse`
+
+   # A response schema that is used to return the profile of a user.
+
+
+   .. py:attribute:: profile
+      :annotation: :Optional[Profile]
+
+      
+
+   .. py:attribute:: error
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: success
+      :annotation: :bool
+
+      
+
+
+.. py:class:: SetProfile
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   # This is a class that is used to set the profile of a user.
+
+
+   .. py:attribute:: bio
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: location
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: favorite_books
+      :annotation: :Optional[List[str]]
+
+      
+
+   .. py:attribute:: favorite_podcasts
+      :annotation: :Optional[List[str]]
+
+      
+
+   .. py:attribute:: favorite_investment
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: owner_avatar_id
+      :annotation: :Optional[uuid.UUID]
+
+      
+
+
+.. py:class:: SetProfileResponse
+
+   Bases: :py:obj:`app.shared.schemas.ResponseSchemas.BaseResponse`
+
+   # A response schema that is used to return the profile of a user.
+
+
+   .. py:attribute:: success
+      :annotation: :bool
+
+      
+
+   .. py:attribute:: error
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: profile
+      :annotation: :Optional[Profile]
+
+      
+
+

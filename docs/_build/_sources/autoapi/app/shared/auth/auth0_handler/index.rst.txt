@@ -1,0 +1,71 @@
+:py:mod:`app.shared.auth.auth0_handler`
+=======================================
+
+.. py:module:: app.shared.auth.auth0_handler
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   app.shared.auth.auth0_handler.sms_start
+   app.shared.auth.auth0_handler.sms_token
+   app.shared.auth.auth0_handler.email_start
+   app.shared.auth.auth0_handler.email_token
+   app.shared.auth.auth0_handler.authorize_user
+   app.shared.auth.auth0_handler.fetch_token
+   app.shared.auth.auth0_handler.verify_token
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   app.shared.auth.auth0_handler.client_id
+   app.shared.auth.auth0_handler.client_secret
+   app.shared.auth.auth0_handler.domain
+
+
+.. py:data:: client_id
+   
+
+   
+
+.. py:data:: client_secret
+   
+
+   
+
+.. py:data:: domain
+   
+
+   
+
+.. py:function:: sms_start(user)
+
+
+.. py:function:: sms_token(user)
+
+
+.. py:function:: email_start(user)
+
+
+.. py:function:: email_token(user)
+
+
+.. py:function:: authorize_user(state=None, connection=None)
+
+
+.. py:function:: fetch_token(code)
+
+
+.. py:function:: verify_token(id_token)
+
+

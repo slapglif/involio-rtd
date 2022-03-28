@@ -1,0 +1,22 @@
+:py:mod:`download`
+==================
+
+.. py:module:: download
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   download.get_file_from_bucket
+
+
+
+.. py:function:: get_file_from_bucket(filename, file_type='files')
+
+

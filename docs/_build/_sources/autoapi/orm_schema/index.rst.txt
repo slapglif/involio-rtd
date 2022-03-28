@@ -1,0 +1,32 @@
+:py:mod:`orm_schema`
+====================
+
+.. py:module:: orm_schema
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   orm_schema.ORMCamelModel
+
+
+
+
+.. py:class:: ORMCamelModel
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   .. py:class:: Config
+
+      .. py:attribute:: orm_mode
+         :annotation: = True
+
+         
+
+
+

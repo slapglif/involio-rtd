@@ -1,0 +1,26 @@
+:py:mod:`test_drafts`
+=====================
+
+.. py:module:: test_drafts
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   test_drafts.test_get_draft_posts
+   test_drafts.test_mark_draft_sent
+
+
+
+.. py:function:: test_get_draft_posts()
+
+
+.. py:function:: test_mark_draft_sent()
+
+

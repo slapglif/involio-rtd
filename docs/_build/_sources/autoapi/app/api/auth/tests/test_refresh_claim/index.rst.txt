@@ -1,0 +1,51 @@
+:py:mod:`app.api.auth.tests.test_refresh_claim`
+===============================================
+
+.. py:module:: app.api.auth.tests.test_refresh_claim
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   app.api.auth.tests.test_refresh_claim.test_jwt_claim
+   app.api.auth.tests.test_refresh_claim.test_wrong_jwt
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   app.api.auth.tests.test_refresh_claim.user_data
+   app.api.auth.tests.test_refresh_claim.test_user
+   app.api.auth.tests.test_refresh_claim.client
+
+
+.. py:data:: user_data
+   
+
+   
+
+.. py:data:: test_user
+   
+
+   
+
+.. py:data:: client
+   
+
+   
+
+.. py:function:: test_jwt_claim()
+
+
+.. py:function:: test_wrong_jwt()
+
+

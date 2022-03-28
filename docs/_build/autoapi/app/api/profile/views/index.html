@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>app.api.profile.views &mdash; Involio Backend 0.0.3 documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../index.html" class="icon icon-home"> Involio Backend
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Involio Backend</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">app.api.profile.views</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/autoapi/app/api/profile/views/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-app.api.profile.views">
+<span id="app-api-profile-views"></span><h1><a class="reference internal" href="#module-app.api.profile.views" title="app.api.profile.views"><code class="xref py py-mod docutils literal notranslate"><span class="pre">app.api.profile.views</span></code></a><a class="headerlink" href="#module-app.api.profile.views" title="Permalink to this headline"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline"></a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.profile.views.build_response" title="app.api.profile.views.build_response"><code class="xref py py-obj docutils literal notranslate"><span class="pre">build_response</span></code></a>(profile: dict)</p></td>
+<td><p>The build_response function takes a profile dictionary and returns a response dictionary.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.profile.views.set_file_data" title="app.api.profile.views.set_file_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_file_data</span></code></a>(request, context)</p></td>
+<td><p>The set_file_data function is used to set the file data for a given profile.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.profile.views.set_data" title="app.api.profile.views.set_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_data</span></code></a>(request, context)</p></td>
+<td><p>The set_data function is used to set the data for a given request.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.profile.views.get_data" title="app.api.profile.views.get_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_data</span></code></a>(context: app.api.profile.schema.GetUserProfile)</p></td>
+<td><p>The get_data function is a helper function that retrieves the user's profile</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.profile.views.set_profile" title="app.api.profile.views.set_profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_profile</span></code></a>(context: app.api.profile.schema.SetProfile, request: fastapi.Request)</p></td>
+<td><p>The set_profile function sets the profile of a user.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.profile.views.get_profile" title="app.api.profile.views.get_profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_profile</span></code></a>(context: app.api.profile.schema.GetUserProfile)</p></td>
+<td><p>The get_profile function returns a user's profile.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.profile.views.router" title="app.api.profile.views.router"><code class="xref py py-obj docutils literal notranslate"><span class="pre">router</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="app.api.profile.views.router">
+<span class="sig-prename descclassname"><span class="pre">app.api.profile.views.</span></span><span class="sig-name descname"><span class="pre">router</span></span><a class="headerlink" href="#app.api.profile.views.router" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.profile.views.build_response">
+<span class="sig-prename descclassname"><span class="pre">app.api.profile.views.</span></span><span class="sig-name descname"><span class="pre">build_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.profile.views.build_response" title="Permalink to this definition"></a></dt>
+<dd><p>The build_response function takes a profile dictionary and returns a response dictionary.
+If the profile is None, then it returns an error message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>profile:dict</strong> – Used to Pass the profile information to the build_response function.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary with a key of success, which is set to true or false depending on whether the profile variable was passed in.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.profile.views.set_file_data">
+<span class="sig-prename descclassname"><span class="pre">app.api.profile.views.</span></span><span class="sig-name descname"><span class="pre">set_file_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.profile.views.set_file_data" title="Permalink to this definition"></a></dt>
+<dd><p>The set_file_data function is used to set the file data for a given profile.
+It takes in a request and context, and returns the owner_id of the profile, as well as
+the updated profile data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> – Used to Get the user’s id and the context parameter is used to get the profile data.</p></li>
+<li><p><strong>context</strong> – Used to Pass information to the template.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The profile data of the user that is currently logged in.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.profile.views.set_data">
+<span class="sig-prename descclassname"><span class="pre">app.api.profile.views.</span></span><span class="sig-name descname"><span class="pre">set_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.profile.views.set_data" title="Permalink to this definition"></a></dt>
+<dd><p>The set_data function is used to set the data for a given request.
+It takes in a request and context as parameters, and returns the owner_id
+and profile_data. The owner_id is found by using ModelMixin’s get_owner function,
+which finds it from the url. The profile data is found by using Profile’s update method,
+which updates all of its fields with values from the form.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> – Used to Get the user’s id, and the context parameter is used to get the owner_id.</p></li>
+<li><p><strong>context</strong> – Used to Pass information to the template.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The profile object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.profile.views.get_data">
+<span class="sig-prename descclassname"><span class="pre">app.api.profile.views.</span></span><span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../schema/index.html#app.api.profile.schema.GetUserProfile" title="app.api.profile.schema.GetUserProfile"><span class="pre">app.api.profile.schema.GetUserProfile</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.profile.views.get_data" title="Permalink to this definition"></a></dt>
+<dd><p>The get_data function is a helper function that retrieves the user’s profile
+from the database. It is called by the get_user_profile endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>context:schema.GetUserProfile</strong> – Used to Get the user id from the request.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A userprofile object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.profile.views.set_profile">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.profile.views.</span></span><span class="sig-name descname"><span class="pre">set_profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../schema/index.html#app.api.profile.schema.SetProfile" title="app.api.profile.schema.SetProfile"><span class="pre">app.api.profile.schema.SetProfile</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">fastapi.Request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.profile.views.set_profile" title="Permalink to this definition"></a></dt>
+<dd><p>The set_profile function sets the profile of a user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>context:schema.SetProfile</strong> – Used to Set the profile of a user.</p></li>
+<li><p><strong>request:Request</strong> – Used to Access the request’s cookies.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A schema.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.profile.views.get_profile">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.profile.views.</span></span><span class="sig-name descname"><span class="pre">get_profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../schema/index.html#app.api.profile.schema.GetUserProfile" title="app.api.profile.schema.GetUserProfile"><span class="pre">app.api.profile.schema.GetUserProfile</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.profile.views.get_profile" title="Permalink to this definition"></a></dt>
+<dd><p>The get_profile function returns a user’s profile.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>context:schema.GetUserProfile</strong> – Used to Get the profile of a user.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A userprofile object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Michael Brown.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

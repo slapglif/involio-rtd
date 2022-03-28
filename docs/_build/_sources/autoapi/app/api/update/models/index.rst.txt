@@ -1,0 +1,114 @@
+:py:mod:`app.api.update.models`
+===============================
+
+.. py:module:: app.api.update.models
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   app.api.update.models.Update
+
+
+
+
+.. py:class:: Update
+
+   Bases: :py:obj:`app.shared.bases.base_model.ModelMixin`
+
+   The Update class is a model that stores an update
+
+   .. py:attribute:: __tablename__
+      :annotation: = social_update
+
+      
+
+   .. py:attribute:: id
+      
+
+      
+
+   .. py:attribute:: owner_id
+      
+
+      
+
+   .. py:attribute:: owner
+      
+
+      
+
+   .. py:attribute:: strategy_id
+      
+
+      
+
+   .. py:attribute:: strategy
+      
+
+      
+
+   .. py:attribute:: portfolio_id
+      
+
+      
+
+   .. py:attribute:: portfolio
+      
+
+      
+
+   .. py:attribute:: title
+      
+
+      
+
+   .. py:attribute:: content
+      
+
+      
+
+   .. py:attribute:: created_at
+      
+
+      
+
+   .. py:attribute:: updated_at
+      
+
+      
+
+   .. py:method:: create_update(cls, *_, **kwargs)
+      :classmethod:
+
+      The create_update function creates a new update object from the given parameters.
+      It does this by calling the Update class's rebuild function, which takes in a dictionary of
+      parameters and returns an updated dictionary with any defaults filled in. It then creates
+      a new update object using that data.
+
+      :param cls: Used to Access the class of the object that is being created.
+      :param *_: Used to Pass a variable number of arguments to a function.
+      :param **kwargs: Used to Pass keyworded variable length of arguments to a function.
+      :return: An instance of the update class.
+
+
+
+
+   .. py:method:: get_updates(cls, *_, **kwargs)
+      :classmethod:
+
+
+   .. py:method:: modify_update(cls, owner_id, update_id: sqlalchemy.dialects.postgresql.UUID, content: str)
+      :classmethod:
+
+
+   .. py:method:: remove_update(cls, *_, **kwargs)
+      :classmethod:
+
+
+

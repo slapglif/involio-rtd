@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>app.api.profile.schema &mdash; Involio Backend 0.0.3 documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../index.html" class="icon icon-home"> Involio Backend
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Involio Backend</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">app.api.profile.schema</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/autoapi/app/api/profile/schema/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-app.api.profile.schema">
+<span id="app-api-profile-schema"></span><h1><a class="reference internal" href="#module-app.api.profile.schema" title="app.api.profile.schema"><code class="xref py py-mod docutils literal notranslate"><span class="pre">app.api.profile.schema</span></code></a><a class="headerlink" href="#module-app.api.profile.schema" title="Permalink to this headline"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.profile.schema.GetUserProfile" title="app.api.profile.schema.GetUserProfile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetUserProfile</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.profile.schema.Profile" title="app.api.profile.schema.Profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Profile</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.profile.schema.GetUserProfileResponse" title="app.api.profile.schema.GetUserProfileResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetUserProfileResponse</span></code></a></p></td>
+<td><p># A response schema that is used to return the profile of a user.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.api.profile.schema.SetProfile" title="app.api.profile.schema.SetProfile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetProfile</span></code></a></p></td>
+<td><p># This is a class that is used to set the profile of a user.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.api.profile.schema.SetProfileResponse" title="app.api.profile.schema.SetProfileResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetProfileResponse</span></code></a></p></td>
+<td><p># A response schema that is used to return the profile of a user.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.profile.schema.GetUserProfile">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.profile.schema.</span></span><span class="sig-name descname"><span class="pre">GetUserProfile</span></span><a class="headerlink" href="#app.api.profile.schema.GetUserProfile" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">fastapi_camelcase.CamelModel</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.profile.schema.GetUserProfile.Config">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#app.api.profile.schema.GetUserProfile.Config" title="Permalink to this definition"></a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.profile.schema.GetUserProfile.Config.schema_extra">
+<span class="sig-name descname"><span class="pre">schema_extra</span></span><a class="headerlink" href="#app.api.profile.schema.GetUserProfile.Config.schema_extra" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.profile.schema.GetUserProfile.owner_id">
+<span class="sig-name descname"><span class="pre">owner_id</span></span><em class="property"><span class="w"> </span><span class="pre">:uuid.UUID</span></em><a class="headerlink" href="#app.api.profile.schema.GetUserProfile.owner_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.profile.schema.Profile">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.profile.schema.</span></span><span class="sig-name descname"><span class="pre">Profile</span></span><a class="headerlink" href="#app.api.profile.schema.Profile" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">app.shared.schemas.orm_schema.ORMCamelModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.profile.schema.Profile.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="w"> </span><span class="pre">:uuid.UUID</span></em><a class="headerlink" href="#app.api.profile.schema.Profile.id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.profile.schema.Profile.bio">
+<span class="sig-name descname"><span class="pre">bio</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.profile.schema.Profile.bio" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.profile.schema.Profile.owner_avatar_id">
+<span class="sig-name descname"><span class="pre">owner_avatar_id</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[uuid.UUID]</span></em><a class="headerlink" href="#app.api.profile.schema.Profile.owner_avatar_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.profile.schema.Profile.location">
+<span class="sig-name descname"><span class="pre">location</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.profile.schema.Profile.location" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.profile.schema.Profile.favorite_investment">
+<span class="sig-name descname"><span class="pre">favorite_investment</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.profile.schema.Profile.favorite_investment" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.profile.schema.Profile.favorite_books">
+<span class="sig-name descname"><span class="pre">favorite_books</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[List[str]]</span></em><a class="headerlink" href="#app.api.profile.schema.Profile.favorite_books" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.profile.schema.Profile.favorite_podcasts">
+<span class="sig-name descname"><span class="pre">favorite_podcasts</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[List[str]]</span></em><a class="headerlink" href="#app.api.profile.schema.Profile.favorite_podcasts" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.api.profile.schema.Profile.blank_string">
+<span class="sig-name descname"><span class="pre">blank_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.profile.schema.Profile.blank_string" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>The blank_string function checks if the value is blank and returns a string</dt><dd><p>of ‘None’ or the original value.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – Used to Pass the value of the field to be blanked.</p></li>
+<li><p><strong>field</strong> – Used to Specify the field in the record that should be returned.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The value of the field.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.api.profile.schema.Profile.blank_array">
+<span class="sig-name descname"><span class="pre">blank_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.profile.schema.Profile.blank_array" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.profile.schema.GetUserProfileResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.profile.schema.</span></span><span class="sig-name descname"><span class="pre">GetUserProfileResponse</span></span><a class="headerlink" href="#app.api.profile.schema.GetUserProfileResponse" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">app.shared.schemas.ResponseSchemas.BaseResponse</span></code></p>
+<p># A response schema that is used to return the profile of a user.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.profile.schema.GetUserProfileResponse.profile">
+<span class="sig-name descname"><span class="pre">profile</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[Profile]</span></em><a class="headerlink" href="#app.api.profile.schema.GetUserProfileResponse.profile" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.profile.schema.GetUserProfileResponse.error">
+<span class="sig-name descname"><span class="pre">error</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.profile.schema.GetUserProfileResponse.error" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.profile.schema.GetUserProfileResponse.success">
+<span class="sig-name descname"><span class="pre">success</span></span><em class="property"><span class="w"> </span><span class="pre">:bool</span></em><a class="headerlink" href="#app.api.profile.schema.GetUserProfileResponse.success" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.profile.schema.SetProfile">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.profile.schema.</span></span><span class="sig-name descname"><span class="pre">SetProfile</span></span><a class="headerlink" href="#app.api.profile.schema.SetProfile" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">fastapi_camelcase.CamelModel</span></code></p>
+<p># This is a class that is used to set the profile of a user.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.profile.schema.SetProfile.bio">
+<span class="sig-name descname"><span class="pre">bio</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.profile.schema.SetProfile.bio" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.profile.schema.SetProfile.location">
+<span class="sig-name descname"><span class="pre">location</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.profile.schema.SetProfile.location" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.profile.schema.SetProfile.favorite_books">
+<span class="sig-name descname"><span class="pre">favorite_books</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[List[str]]</span></em><a class="headerlink" href="#app.api.profile.schema.SetProfile.favorite_books" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.profile.schema.SetProfile.favorite_podcasts">
+<span class="sig-name descname"><span class="pre">favorite_podcasts</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[List[str]]</span></em><a class="headerlink" href="#app.api.profile.schema.SetProfile.favorite_podcasts" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.profile.schema.SetProfile.favorite_investment">
+<span class="sig-name descname"><span class="pre">favorite_investment</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.profile.schema.SetProfile.favorite_investment" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.profile.schema.SetProfile.owner_avatar_id">
+<span class="sig-name descname"><span class="pre">owner_avatar_id</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[uuid.UUID]</span></em><a class="headerlink" href="#app.api.profile.schema.SetProfile.owner_avatar_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.api.profile.schema.SetProfileResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.profile.schema.</span></span><span class="sig-name descname"><span class="pre">SetProfileResponse</span></span><a class="headerlink" href="#app.api.profile.schema.SetProfileResponse" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">app.shared.schemas.ResponseSchemas.BaseResponse</span></code></p>
+<p># A response schema that is used to return the profile of a user.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.profile.schema.SetProfileResponse.success">
+<span class="sig-name descname"><span class="pre">success</span></span><em class="property"><span class="w"> </span><span class="pre">:bool</span></em><a class="headerlink" href="#app.api.profile.schema.SetProfileResponse.success" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.profile.schema.SetProfileResponse.error">
+<span class="sig-name descname"><span class="pre">error</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[str]</span></em><a class="headerlink" href="#app.api.profile.schema.SetProfileResponse.error" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.api.profile.schema.SetProfileResponse.profile">
+<span class="sig-name descname"><span class="pre">profile</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[Profile]</span></em><a class="headerlink" href="#app.api.profile.schema.SetProfileResponse.profile" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Michael Brown.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

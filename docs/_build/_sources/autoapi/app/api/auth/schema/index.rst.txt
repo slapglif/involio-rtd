@@ -1,0 +1,393 @@
+:py:mod:`app.api.auth.schema`
+=============================
+
+.. py:module:: app.api.auth.schema
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   app.api.auth.schema.UserRecovery
+   app.api.auth.schema.Recovery
+   app.api.auth.schema.Response
+   app.api.auth.schema.RecoveryResponse
+   app.api.auth.schema.SMSStart
+   app.api.auth.schema.EmailStart
+   app.api.auth.schema.SMSLogin
+   app.api.auth.schema.EmailLogin
+   app.api.auth.schema.SMSStartResponse
+   app.api.auth.schema.EmailStartResponse
+   app.api.auth.schema.OTPLoginResponse
+   app.api.auth.schema.OIDLogin
+   app.api.auth.schema.OIDResponse
+   app.api.auth.schema.RefreshTokenResponse
+
+
+
+
+.. py:class:: UserRecovery
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   The UserRecovery class is a model that contains the information about a user's password recovery
+
+   .. py:class:: Config
+
+      .. py:attribute:: schema_extra
+         
+
+         
+
+
+   .. py:attribute:: email
+      :annotation: :pydantic.EmailStr
+
+      
+
+
+.. py:class:: Recovery
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   The Recovery class is a model that represents a recovery
+
+   .. py:class:: Config
+
+      .. py:attribute:: schema_extra
+         
+
+         
+
+
+   .. py:attribute:: email
+      :annotation: :pydantic.EmailStr
+
+      
+
+   .. py:attribute:: code
+      :annotation: :str
+
+      
+
+   .. py:attribute:: password
+      :annotation: :str
+
+      
+
+
+.. py:class:: Response
+
+   Bases: :py:obj:`app.shared.schemas.ResponseSchemas.BaseResponse`
+
+   The Response class is a model that represents a response to a question
+
+   .. py:attribute:: error
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: response
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: success
+      :annotation: :Optional[bool]
+
+      
+
+
+.. py:class:: RecoveryResponse
+
+   Bases: :py:obj:`app.shared.schemas.ResponseSchemas.BaseResponse`
+
+   The above class is a model that represents the response to a recovery request
+
+   .. py:attribute:: error
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: success
+      :annotation: :Optional[bool]
+
+      
+
+   .. py:attribute:: recovery_token
+      :annotation: :Optional[str]
+
+      
+
+
+.. py:class:: SMSStart
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   SMSStart class is a model that represents the start of an SMS message
+
+   .. py:class:: Config
+
+      .. py:attribute:: schema_extra
+         
+
+         
+
+
+   .. py:attribute:: phone
+      :annotation: :str
+
+      
+
+
+.. py:class:: EmailStart
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   .. py:class:: Config
+
+      .. py:attribute:: schema_extra
+         
+
+         
+
+
+   .. py:attribute:: email
+      :annotation: :str
+
+      
+
+
+.. py:class:: SMSLogin
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   SMSLogin class is a model that represents the start of an SMS message
+
+   .. py:class:: Config
+
+      .. py:attribute:: schema_extra
+         
+
+         
+
+
+   .. py:attribute:: phone
+      :annotation: :str
+
+      
+
+   .. py:attribute:: code
+      :annotation: :str
+
+      
+
+
+.. py:class:: EmailLogin
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   The EmailLogin class is a model that represents a user's login credentials
+
+   .. py:class:: Config
+
+      .. py:attribute:: schema_extra
+         
+
+         
+
+
+   .. py:attribute:: email
+      :annotation: :str
+
+      
+
+   .. py:attribute:: code
+      :annotation: :str
+
+      
+
+
+.. py:class:: SMSStartResponse
+
+   Bases: :py:obj:`app.shared.schemas.ResponseSchemas.BaseResponse`
+
+   A SMSStartResponse is a model that represents the response to a
+
+   .. py:attribute:: response
+      :annotation: :Optional[uuid.UUID]
+
+      
+
+   .. py:attribute:: phone_number
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: phone_verified
+      :annotation: :Optional[bool]
+
+      
+
+   .. py:attribute:: request_language
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: error
+      :annotation: :Optional[str]
+
+      
+
+
+.. py:class:: EmailStartResponse
+
+   Bases: :py:obj:`app.shared.schemas.ResponseSchemas.BaseResponse`
+
+   An email start response is a response to the start email verification endpoint
+
+   .. py:attribute:: response
+      :annotation: :Optional[uuid.UUID]
+
+      
+
+   .. py:attribute:: email
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: email_verified
+      :annotation: :Optional[bool]
+
+      
+
+   .. py:attribute:: error
+      :annotation: :Optional[str]
+
+      
+
+
+.. py:class:: OTPLoginResponse
+
+   Bases: :py:obj:`app.shared.schemas.ResponseSchemas.BaseResponse`
+
+   .. py:attribute:: access_token
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: refresh_token
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: response
+      :annotation: :Optional[uuid.UUID]
+
+      
+
+   .. py:attribute:: id_token
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: scope
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: expires_in
+      :annotation: :Optional[int]
+
+      
+
+   .. py:attribute:: token_type
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: error
+      :annotation: :Optional[str]
+
+      
+
+
+.. py:class:: OIDLogin
+
+   Bases: :py:obj:`fastapi_camelcase.CamelModel`
+
+   OIDLogin is a class that represents a user's login to the system
+
+   .. py:class:: Config
+
+      .. py:attribute:: schema_extra
+         
+
+         
+
+
+   .. py:attribute:: phone
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: email
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: code
+      :annotation: :str
+
+      
+
+
+.. py:class:: OIDResponse
+
+   Bases: :py:obj:`app.shared.schemas.ResponseSchemas.BaseResponse`
+
+   OIDResponse tells the Python interpreter that this class will be used
+   to create objects that represent the OIDResponse JSON object in the API.
+
+   .. py:attribute:: access_token
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: id_token
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: error
+      :annotation: :Optional[str]
+
+      
+
+
+.. py:class:: RefreshTokenResponse
+
+   Bases: :py:obj:`app.shared.schemas.ResponseSchemas.BaseResponse`
+
+   RefreshTokenResponse tells the API what to expect when it gets a response from the server.
+
+   .. py:attribute:: access_token
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: success
+      :annotation: :bool
+
+      
+
+   .. py:attribute:: error
+      :annotation: :Optional[str]
+
+      
+
+

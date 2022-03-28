@@ -1,0 +1,23 @@
+:py:mod:`upload`
+================
+
+.. py:module:: upload
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   upload.upload_file
+
+
+
+.. py:function:: upload_file(filename, filetype='files')
+   :async:
+
+

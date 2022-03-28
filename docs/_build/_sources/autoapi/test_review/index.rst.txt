@@ -1,0 +1,30 @@
+:py:mod:`test_review`
+=====================
+
+.. py:module:: test_review
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   test_review.test_review_strat
+   test_review.test_review_portfolio
+   test_review.test_get_reviews
+
+
+
+.. py:function:: test_review_strat()
+
+
+.. py:function:: test_review_portfolio()
+
+
+.. py:function:: test_get_reviews()
+
+

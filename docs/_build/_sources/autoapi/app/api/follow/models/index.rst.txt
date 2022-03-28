@@ -1,0 +1,251 @@
+:py:mod:`app.api.follow.models`
+===============================
+
+.. py:module:: app.api.follow.models
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   app.api.follow.models.FollowCommandFactory
+   app.api.follow.models.FollowUser
+   app.api.follow.models.FollowStrategy
+   app.api.follow.models.FollowPortfolio
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   app.api.follow.models.constant
+   app.api.follow.models.get_queries
+
+
+
+.. py:function:: constant()
+
+   Constants model class for storing literal query values
+
+
+.. py:class:: FollowCommandFactory
+
+   Bases: :py:obj:`app.shared.bases.base_model.ModelMixin`
+
+   Abstraction allowing a Follow Model to inherit a suite of related commands
+
+   .. py:attribute:: __abstract__
+      :annotation: = True
+
+      
+
+   .. py:method:: create_follow(cls: app.shared.bases.base_model.ModelType, *_, **kwargs) -> dict
+      :classmethod:
+
+      The create_follow function creates a follow relationship between two users.
+      It takes in the following parameters:
+          * user_id - The id of the user who is being followed.
+          * follower_id - The id of the user who is doing the following.
+
+          If both ids are valid, it creates a new follow object and adds it to our database session, then commits that session to our database.
+
+      :param *_: Used to Pass a variable number of arguments to a function.
+      :param **kwargs: Used to Capture any additional keyword arguments that may be passed to the function.
+      :return: dict containing the query result and a success bool
+
+
+   .. py:method:: delete_follow(cls: app.shared.bases.base_model.ModelType, **kwargs) -> dict
+      :classmethod:
+
+      The delete_follow function deletes a follow from the database.
+      It takes in a dictionary of parameters and uses them to delete the follow from the database.
+      If no such follow exists, it returns an error message.
+
+      :param follow_id: UUID of the follow object
+      :return: A dictionary with a key of "success" and.
+
+
+   .. py:method:: get_followers(cls: app.shared.bases.base_model.ModelType, user_id)
+      :classmethod:
+
+      The get_followers function accepts a user_id as an argument and returns the list of followers for that user.
+
+      :param cls:ModelType: Used to Specify the model class that will be used to query the database.
+      :param user_id: Used to Specify the user for which to retrieve followers.
+      :return: A list of followers for a user.
+
+
+
+   .. py:method:: get_following(cls: app.shared.bases.base_model.ModelType, user_id)
+      :classmethod:
+
+      The get_following function accepts a user_id as an argument and returns the
+      list of users that user is following.
+
+      :param user_id: Used to Specify the user for which to retrieve followers.
+      :return: A list of the followers of a user.
+
+
+
+.. py:function:: get_queries(user_id: str, user: app.shared.bases.base_model.ModelType)
+
+   The get_queries function returns a dictionary of queries that will be used to
+   determine whether or not the user is following another user. The function takes in
+   two parameters, the first being a string representing the id of the current user and
+   the second being an instance of User model type. It then returns a dictionary with two keys:
+   following_count and follower_count. Following count represents how many users are following
+   the current user while follower count represents how many users are followed by this particular
+   user.
+
+   :param user_id:str: Used to Check if the user is following someone.
+   :param user:ModelType: Used to Access the user's id and username.
+   :return: A list of queries.
+
+
+.. py:class:: FollowUser
+
+   Bases: :py:obj:`FollowCommandFactory`
+
+   Model  Declaration for user who is followed by a user
+
+   .. py:attribute:: __tablename__
+      :annotation: = social_follow_user
+
+      
+
+   .. py:attribute:: id
+      
+
+      
+
+   .. py:attribute:: owner_id
+      
+
+      
+
+   .. py:attribute:: owner
+      
+
+      
+
+   .. py:attribute:: followed_user_id
+      
+
+      
+
+   .. py:attribute:: followed_user
+      
+
+      
+
+   .. py:attribute:: created_at
+      
+
+      
+
+   .. py:attribute:: updated_at
+      
+
+      
+
+
+.. py:class:: FollowStrategy
+
+   Bases: :py:obj:`FollowCommandFactory`
+
+   Declarative schema for strategy follows
+
+   .. py:attribute:: __tablename__
+      :annotation: = social_follow_strategy
+
+      
+
+   .. py:attribute:: id
+      
+
+      
+
+   .. py:attribute:: owner_id
+      
+
+      
+
+   .. py:attribute:: owner
+      
+
+      
+
+   .. py:attribute:: followed_strategy_id
+      
+
+      
+
+   .. py:attribute:: followed_strategy
+      
+
+      
+
+   .. py:attribute:: created_at
+      
+
+      
+
+   .. py:attribute:: updated_at
+      
+
+      
+
+
+.. py:class:: FollowPortfolio
+
+   Bases: :py:obj:`FollowCommandFactory`
+
+   Declarative schema for portfolio follows
+
+   .. py:attribute:: __tablename__
+      :annotation: = social_follow_portfolio
+
+      
+
+   .. py:attribute:: id
+      
+
+      
+
+   .. py:attribute:: owner_id
+      
+
+      
+
+   .. py:attribute:: owner
+      
+
+      
+
+   .. py:attribute:: followed_portfolio_id
+      
+
+      
+
+   .. py:attribute:: followed_portfolio
+      
+
+      
+
+   .. py:attribute:: created_at
+      
+
+      
+
+   .. py:attribute:: updated_at
+      
+
+      
+
+

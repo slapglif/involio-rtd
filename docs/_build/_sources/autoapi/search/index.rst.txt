@@ -1,0 +1,79 @@
+:py:mod:`search`
+================
+
+.. py:module:: search
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   search.add_user
+   search.update_user
+   search.remove_user
+   search.search_users
+   search.seed_users
+   search.nuke_ms_db
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   search.client
+
+
+.. py:data:: client
+   
+
+   
+
+.. py:function:: add_user(user_id: str, **kwargs)
+
+   The add_user function adds a user to the users index.
+
+   :param user_id:UUID: Used to Uniquely identify the user.
+   :param username:str: Used to Store the username of the user that is being added.
+   :param name:str: Used to Store the name of the user.
+   :return: A list of the new user's id, username and name.
+
+
+.. py:function:: update_user(user_id: str, **kwargs)
+
+   Args:
+       user_id: The UUID of the user to update
+       **kwargs: Any keywords whose values have changed
+
+
+.. py:function:: remove_user(user_id: uuid.UUID)
+
+   The remove_user function removes a user from the database.
+
+   :param user_id:UUID: Used to Specify the user that we want to remove from our database.
+   :return: The user_id that was removed.
+
+
+.. py:function:: search_users(model: app.shared.bases.base_model.ModelType, query: str) -> dict[str, Any]
+
+   The search_users function searches the users index for any user that matches the query.
+   It returns a list of all matching users.
+
+   :param model: Model to pass down
+   :param query:str: Used to Search for users by name.
+   :return: A dictionary with the keys "success" and.
+
+
+
+.. py:function:: seed_users(users)
+
+
+.. py:function:: nuke_ms_db()
+
+

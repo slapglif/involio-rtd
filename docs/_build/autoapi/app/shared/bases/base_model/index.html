@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>app.shared.bases.base_model &mdash; Involio Backend 0.0.3 documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../index.html" class="icon icon-home"> Involio Backend
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Involio Backend</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">app.shared.bases.base_model</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/autoapi/app/shared/bases/base_model/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-app.shared.bases.base_model">
+<span id="app-shared-bases-base-model"></span><h1><a class="reference internal" href="#module-app.shared.bases.base_model" title="app.shared.bases.base_model"><code class="xref py py-mod docutils literal notranslate"><span class="pre">app.shared.bases.base_model</span></code></a><a class="headerlink" href="#module-app.shared.bases.base_model" title="Permalink to this headline"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.shared.bases.base_model.ModelMixin" title="app.shared.bases.base_model.ModelMixin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ModelMixin</span></code></a></p></td>
+<td><p>Generic Mixin Model to provide helper functions that all Model classes need</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.shared.bases.base_model.Page" title="app.shared.bases.base_model.Page"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Page</span></code></a></p></td>
+<td><p>Pagination class to allow for paging of database data</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.shared.bases.base_model.paginate" title="app.shared.bases.base_model.paginate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">paginate</span></code></a>(query: sqlalchemy.orm.Query, page: int, page_size: int) → Page[sqlalchemy.engine.Row]</p></td>
+<td><p>The paginate function takes a query, the page number and page size as arguments.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.shared.bases.base_model.mapper_registry" title="app.shared.bases.base_model.mapper_registry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mapper_registry</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.shared.bases.base_model.DeclarativeBase" title="app.shared.bases.base_model.DeclarativeBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DeclarativeBase</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.shared.bases.base_model.Base" title="app.shared.bases.base_model.Base"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Base</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.shared.bases.base_model.ModelType" title="app.shared.bases.base_model.ModelType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ModelType</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="app.shared.bases.base_model.mapper_registry">
+<span class="sig-prename descclassname"><span class="pre">app.shared.bases.base_model.</span></span><span class="sig-name descname"><span class="pre">mapper_registry</span></span><a class="headerlink" href="#app.shared.bases.base_model.mapper_registry" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="app.shared.bases.base_model.DeclarativeBase">
+<span class="sig-prename descclassname"><span class="pre">app.shared.bases.base_model.</span></span><span class="sig-name descname"><span class="pre">DeclarativeBase</span></span><a class="headerlink" href="#app.shared.bases.base_model.DeclarativeBase" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="app.shared.bases.base_model.Base">
+<span class="sig-prename descclassname"><span class="pre">app.shared.bases.base_model.</span></span><span class="sig-name descname"><span class="pre">Base</span></span><a class="headerlink" href="#app.shared.bases.base_model.Base" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="app.shared.bases.base_model.ModelType">
+<span class="sig-prename descclassname"><span class="pre">app.shared.bases.base_model.</span></span><span class="sig-name descname"><span class="pre">ModelType</span></span><a class="headerlink" href="#app.shared.bases.base_model.ModelType" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.shared.bases.base_model.ModelMixin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.shared.bases.base_model.</span></span><span class="sig-name descname"><span class="pre">ModelMixin</span></span><a class="headerlink" href="#app.shared.bases.base_model.ModelMixin" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#app.shared.bases.base_model.Base" title="app.shared.bases.base_model.Base"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Base</span></code></a></p>
+<p>Generic Mixin Model to provide helper functions that all Model classes need</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.shared.bases.base_model.ModelMixin.__abstract__">
+<span class="sig-name descname"><span class="pre">__abstract__</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#app.shared.bases.base_model.ModelMixin.__abstract__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.shared.bases.base_model.ModelMixin.get_or_create">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_or_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ModelType</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">_</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ModelType</span></span></span><a class="headerlink" href="#app.shared.bases.base_model.ModelMixin.get_or_create" title="Permalink to this definition"></a></dt>
+<dd><p>The get_or_create function is a helper function that will either get an object or create it if it doesn’t exist.
+For example, let’s say we have a model called User with two fields: username and email.
+We want to be able to easily create new users based on their username and email address, but we also
+want our API endpoints (and other parts of our code) to check whether a user already exists before creating them.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cls:ModelType</strong> – Used to Specify the model class that will be used to create or retrieve an instance.</p></li>
+<li><p><strong>*_</strong> – <p>Used to Ignore the first positional argument.</p>
+</p></li>
+<li><p><strong>**kwargs</strong> – <p>Used to Pass in all the fields of the model.</p>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A tuple containing the object and a boolean value indicating whether it was created.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.shared.bases.base_model.ModelMixin.map_to_model">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">map_to_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">pydantic.BaseModel</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">sqlalchemy.engine.Row</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">sqlalchemy.engine.Row</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.shared.bases.base_model.ModelMixin.map_to_model" title="Permalink to this definition"></a></dt>
+<dd><p>The map_to_model function takes a model and a list of tuples,
+and returns the same list of tuples with each tuple converted into an instance
+of the given model. For example:</p>
+<blockquote>
+<div><p>map_to_model(User, [(‘user-id’, ‘username’), (‘user-id2’, ‘username2’)])
+# Returns [User(user_id=’user-id’, username=’username’), User(…)]</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model:Type</strong><strong>[</strong><strong>BaseModel</strong><strong>]</strong> – Used to Specify the model that is used to create a list of instances.</p></li>
+<li><p><strong>db_response:Union</strong><strong>[</strong><strong>Row</strong> – Used to Determine if the db_response is a list of keyed tuples or just one.</p></li>
+<li><p><strong>List</strong><strong>[</strong><strong>Row</strong><strong>]</strong><strong>]</strong> – Used to Check if the db_response is a list of keyed tuples.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of the model class with properties mapped to value from the db_response.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.shared.bases.base_model.ModelMixin.rebuild">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rebuild</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#app.shared.bases.base_model.ModelMixin.rebuild" title="Permalink to this definition"></a></dt>
+<dd><p>The rebuild function takes a dictionary of data and returns a new dictionary
+with the following changes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The created_at field is set to the current time.</p></li>
+<li><p>If an id value is not provided, one will be generated.</p></li>
+</ul>
+<dl class="simple">
+<dt>Args:</dt><dd><p>kwargs (dict): A dictionary of data to rebuild into a model instance.</p>
+</dd>
+<dt>Returns:</dt><dd><p>dict: A rebuilt model instance with all fields updated and any missing ids added.</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kwargs:dict</strong> – Used to Pass in the dictionary of arguments that is being passed into the function.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.shared.bases.base_model.ModelMixin.build_filters">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_filters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#app.shared.bases.base_model.ModelMixin.build_filters" title="Permalink to this definition"></a></dt>
+<dd><p>The build_filters function takes a dictionary of keyword arguments and returns a dictionary of
+filters that can be used to query the database. The returned filters are constrained by the
+keyword arguments passed in, which are also used as the keys for the returned filters. If no
+constraints are provided, all keyword arguments will be used as constraints.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kwargs:dict</strong> – Used to Pass in the dictionary of parameters that we want to filter on.</p></li>
+<li><p><strong>constraints:list=None</strong> – Used to Specify which constraints to apply.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary of filters.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.shared.bases.base_model.ModelMixin.get_filters">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_filters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydantic.BaseModel</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.shared.bases.base_model.ModelMixin.get_filters" title="Permalink to this definition"></a></dt>
+<dd><p>The get_filters function is a helper function that takes in the context and kwargs
+and returns a dictionary of filters. The get_filters function is used by all the
+endpoints to filter their results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>context:BaseModel=None</strong> – Used to Pass the context of the request.</p></li>
+<li><p><strong>kwargs:dict=None</strong> – Used to Pass in any additional keyword arguments that are passed into the function.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary of filters.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.shared.bases.base_model.ModelMixin.get_owner_context">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_owner_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">starlette.requests.Request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydantic.BaseModel</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">sqlalchemy.dialects.postgresql.UUID</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#app.shared.bases.base_model.ModelMixin.get_owner_context" title="Permalink to this definition"></a></dt>
+<dd><p>The get_owner_context function accepts a request and context object as arguments.
+It returns the owner_id of the user making the request, and a dictionary containing
+the values from the context object that are not None or empty strings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request:Request</strong> – Used to Get the user id of the current logged-in user.</p></li>
+<li><p><strong>context:BaseModel</strong> – Used to Get the fields of the model that are not none or empty strings.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The owner_id of the user making the request, and a dictionary containing.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.shared.bases.base_model.ModelMixin.get_kwarg_dependencies">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_kwarg_dependencies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.shared.bases.base_model.ModelMixin.get_kwarg_dependencies" title="Permalink to this definition"></a></dt>
+<dd><p>The get_kwarg_dependencies function takes a dictionary of keyword arguments and removes any keyword
+arguments that do not contain an _id field, which is the default requirement of any user identity object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kwargs</strong> – Used to Store the arguments passed to a function.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of the dependencies for a given kwarg.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.shared.bases.base_model.ModelMixin.get_id_args">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_id_args</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">_</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.shared.bases.base_model.ModelMixin.get_id_args" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.shared.bases.base_model.ModelMixin.get_constraints">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_constraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kwargs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.shared.bases.base_model.ModelMixin.get_constraints" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.shared.bases.base_model.ModelMixin.build_response">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ModelType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overload</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#app.shared.bases.base_model.ModelMixin.build_response" title="Permalink to this definition"></a></dt>
+<dd><p>The build_response function takes a list of database objects and returns a dictionary with the following structure:</p>
+<p>“success”: True, or False if no data was returned from the database.
+“&lt;Model Name&gt;”: [&lt;database object&gt;] The actual data that was returned from the database.        :param overload: custom dictionary to overload the response with
+:param error: Custom Error message if any
+:param object_data: Optional data to include in the response
+:param cls: Used to Access variables that belongs to the class.
+:return: A dictionary with a key of success and the data.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.shared.bases.base_model.Page">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.shared.bases.base_model.</span></span><span class="sig-name descname"><span class="pre">Page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">items</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.shared.bases.base_model.Page" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">Generic</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">T</span></code>]</p>
+<p>Pagination class to allow for paging of database data</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app.shared.bases.base_model.Page.__getitem__">
+<span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.shared.bases.base_model.Page.__getitem__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.shared.bases.base_model.Page.as_dict">
+<span class="sig-name descname"><span class="pre">as_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.shared.bases.base_model.Page.as_dict" title="Permalink to this definition"></a></dt>
+<dd><p>The as_dict function returns a dictionary representation of the object.
+This is useful for JSON serialization, and also allows you to access all the
+properties on the object directly from the returned dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>self</strong> – Used to Reference the current instance of the class.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary that contains all the information about the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.shared.bases.base_model.Page._getitem">
+<span class="sig-name descname"><span class="pre">_getitem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">self1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.shared.bases.base_model.Page._getitem" title="Permalink to this definition"></a></dt>
+<dd><p>The _getitem function is a helper function that is called by the getitem method.
+It takes in two parameters, self and parameters. The self parameter is automatically passed to the function when it’s called, so you don’t need to worry about this one too much. The second parameter is a dictionary of all of the keyword arguments that were passed into getitem (which was itself called from __getitem__). This means that if someone calls your class like:</p>
+<p>my_class[“hello”, “world”]  # &lt;- This will be translated into <cite>my_class._getitem({“key”: [“hello”, “world”]})</cite> by Python before calling __getitem__.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self</strong> – Used to Access variables that belongs to the class.</p></li>
+<li><p><strong>self1</strong> – Used to Refer to the instance of the class.</p></li>
+<li><p><strong>parameters</strong> – Used to Pass in the parameters of the function.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of the items in the set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.shared.bases.base_model.paginate">
+<span class="sig-prename descclassname"><span class="pre">app.shared.bases.base_model.</span></span><span class="sig-name descname"><span class="pre">paginate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">sqlalchemy.orm.Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#app.shared.bases.base_model.Page" title="app.shared.bases.base_model.Page"><span class="pre">Page</span></a><span class="p"><span class="pre">[</span></span><span class="pre">sqlalchemy.engine.Row</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#app.shared.bases.base_model.paginate" title="Permalink to this definition"></a></dt>
+<dd><p>The paginate function takes a query, the page number and page size as arguments.
+It then returns a tuple of the items on that page and the total number of items.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> – Used to Pass a query object to the paginate function.</p></li>
+<li><p><strong>page</strong> – Used to Determine which page of results to return.</p></li>
+<li><p><strong>page_size</strong> – Used to Determine how many items to show on each page.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A tuple containing the list of items for that page, and a total number of pages.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Michael Brown.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
